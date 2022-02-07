@@ -36,16 +36,6 @@ namespace CryptoTPS.API.Infrastructure.Services.Implementations
             else return DateTime.MinValue;
         }
 
-        public IEnumerable<DataPoint> GetGasAdjustedTPSAt(long timestamp, string network, int count)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<DataPoint> GetGPSAt(long timestamp, string network, int count)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<TimeWarpSyncProgressModel> GetSyncProgress(string provider, string network)
         {
             var blockInfoProvider = _services.GetProvider(provider);

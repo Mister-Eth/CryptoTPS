@@ -79,7 +79,6 @@ namespace CryptoTPS.Services.BlockchainServices.Scan
             return Task.FromResult(new BlockInfo()
             {
                 BlockNumber = blockNumber,
-                GasUsed = double.Parse(gasUsed),
                 TransactionCount = int.Parse(txCount),
                 Date = date
             });

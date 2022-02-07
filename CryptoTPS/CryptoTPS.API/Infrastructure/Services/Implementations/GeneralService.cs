@@ -20,18 +20,6 @@ namespace CryptoTPS.API.Infrastructure.Services.Implementations
         {
             _tpsService = tpsService;
         }
-
-
-        public IEnumerable<string> Networks()
-        {
-            IEnumerable<string> result;
-            lock (Context.LockObj)
-            {
-                result = Context.Networks.Select(x => x.Name);
-            }
-            return result;
-        }
-
         
         public IEnumerable<string> Intervals() => TimeIntervals();
 

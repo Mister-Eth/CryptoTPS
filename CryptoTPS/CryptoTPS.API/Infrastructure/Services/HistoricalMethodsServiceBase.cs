@@ -16,7 +16,7 @@ namespace CryptoTPS.API.Infrastructure.Services
             HistoricalDataProviders = historicalDataProviders;
         }
 
-        protected IEnumerable<TimedTPSAndGasData> GetHistoricalData(string interval, string provider, string network)
+        protected IEnumerable<TimedTPSData> GetHistoricalData(string interval, string provider, string network)
         {
             if (HistoricalDataProviders.Any(x => x.Interval == interval))
             {
@@ -25,7 +25,7 @@ namespace CryptoTPS.API.Infrastructure.Services
             }
             else
             {
-                return new List<TimedTPSAndGasData>();
+                return new List<TimedTPSData>();
             }
         }
     }

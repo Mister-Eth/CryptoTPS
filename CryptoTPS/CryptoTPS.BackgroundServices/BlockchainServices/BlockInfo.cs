@@ -10,18 +10,16 @@ namespace CryptoTPS.Services.BlockchainServices
     {
         public int BlockNumber { get; set; }
         public int TransactionCount { get; set; }
-        public double GasUsed { get; set; }
         public DateTime Date { get; set; }
         public bool Settled { get; set; } = true;
 
-        public static TPSGPSInfo operator -(BlockInfo a, BlockInfo b)
+        public static TPSInfo operator -(BlockInfo a, BlockInfo b)
         {
-            return new TPSGPSInfo()
+            return new TPSInfo()
             {
                 Date = a.Date,
                 BlockNumber = a.BlockNumber,
-                TPS = (a.TransactionCount) / (a.Date.Subtract(b.Date).TotalSeconds),
-                GPS = (a.GasUsed) / (a.Date.Subtract(b.Date).TotalSeconds),
+                TPS = (a.TransactionCount) / (a.Date.Subtract(b.Date).TotalSeconds)
             };
         }
     }

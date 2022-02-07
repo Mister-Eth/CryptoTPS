@@ -5,9 +5,8 @@ using System.Collections.Generic;
 
 namespace CryptoTPS.Data.Database
 {
-    public partial class TpsandGasDataLatest : TPSAndGasDataBase
+    public partial class TpsDataLatest : TPSDataBase
     {
         public double Tps { get; set; }
-        public double Gps { get; set; }
     }
 }

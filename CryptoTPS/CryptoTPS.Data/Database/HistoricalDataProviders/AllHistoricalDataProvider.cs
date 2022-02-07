@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace CryptoTPS.Data.Database.HistoricalDataProviders
 {
-    public class AllHistoricalDataProvider : HistoricalDataProviderBase<TpsandGasDataAll>
+    public class AllHistoricalDataProvider : HistoricalDataProviderBase<TpsDataAll>
     {
-        public AllHistoricalDataProvider(CryptoTPSContext context) : base("All", context, x => x.TpsandGasDataAlls, TimeSpan.MaxValue)
+        public AllHistoricalDataProvider(CryptoTPSContext context) : base("All", context, x => x.TpsDataAlls, TimeSpan.MaxValue)
         {
 
         }

@@ -16,14 +16,14 @@ namespace CryptoTPS.Data.Database
             TimeWarpDataHours = new HashSet<TimeWarpDataHour>();
             TimeWarpDataMinutes = new HashSet<TimeWarpDataMinute>();
             TimeWarpDataWeeks = new HashSet<TimeWarpDataWeek>();
-            TpsandGasDataAlls = new HashSet<TpsandGasDataAll>();
-            TpsandGasDataDays = new HashSet<TpsandGasDataDay>();
-            TpsandGasDataHours = new HashSet<TpsandGasDataHour>();
-            TpsandGasDataLatests = new HashSet<TpsandGasDataLatest>();
-            TpsandGasDataMaxes = new HashSet<TpsandGasDataMax>();
-            TpsandGasDataMonths = new HashSet<TpsandGasDataMonth>();
-            TpsandGasDataWeeks = new HashSet<TpsandGasDataWeek>();
-            TpsandGasDataYears = new HashSet<TpsandGasDataYear>();
+            TpsDataAlls = new HashSet<TpsDataAll>();
+            TpsDataDays = new HashSet<TpsDataDay>();
+            TpsDataHours = new HashSet<TpsDataHour>();
+            TpsDataLatests = new HashSet<TpsDataLatest>();
+            TpsDataMaxes = new HashSet<TpsDataMax>();
+            TpsDataMonths = new HashSet<TpsDataMonth>();
+            TpsDataWeeks = new HashSet<TpsDataWeek>();
+            TpsDataYears = new HashSet<TpsDataYear>();
         }
 
         public int Id { get; set; }
@@ -43,13 +43,13 @@ namespace CryptoTPS.Data.Database
         public virtual ICollection<TimeWarpDataHour> TimeWarpDataHours { get; set; }
         public virtual ICollection<TimeWarpDataMinute> TimeWarpDataMinutes { get; set; }
         public virtual ICollection<TimeWarpDataWeek> TimeWarpDataWeeks { get; set; }
-        public virtual ICollection<TpsandGasDataAll> TpsandGasDataAlls { get; set; }
-        public virtual ICollection<TpsandGasDataDay> TpsandGasDataDays { get; set; }
-        public virtual ICollection<TpsandGasDataHour> TpsandGasDataHours { get; set; }
-        public virtual ICollection<TpsandGasDataLatest> TpsandGasDataLatests { get; set; }
-        public virtual ICollection<TpsandGasDataMax> TpsandGasDataMaxes { get; set; }
-        public virtual ICollection<TpsandGasDataMonth> TpsandGasDataMonths { get; set; }
-        public virtual ICollection<TpsandGasDataWeek> TpsandGasDataWeeks { get; set; }
-        public virtual ICollection<TpsandGasDataYear> TpsandGasDataYears { get; set; }
+        public virtual ICollection<TpsDataAll> TpsDataAlls { get; set; }
+        public virtual ICollection<TpsDataDay> TpsDataDays { get; set; }
+        public virtual ICollection<TpsDataHour> TpsDataHours { get; set; }
+        public virtual ICollection<TpsDataLatest> TpsDataLatests { get; set; }
+        public virtual ICollection<TpsDataMax> TpsDataMaxes { get; set; }
+        public virtual ICollection<TpsDataMonth> TpsDataMonths { get; set; }
+        public virtual ICollection<TpsDataWeek> TpsDataWeeks { get; set; }
+        public virtual ICollection<TpsDataYear> TpsDataYears { get; set; }
     }
 }

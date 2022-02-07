@@ -25,15 +25,15 @@ namespace CryptoTPS.Data.Database
         public virtual DbSet<Network> Networks { get; set; }
         public virtual DbSet<Provider> Providers { get; set; }
         public virtual DbSet<ProviderType> ProviderTypes { get; set; }
-        public virtual DbSet<TpsandGasDataDay> TpsandGasDataDays { get; set; }
-        public virtual DbSet<TpsandGasDataHour> TpsandGasDataHours { get; set; }
-        public virtual DbSet<TpsandGasDataMax> TpsandGasDataMaxes { get; set; }
-        public virtual DbSet<TpsandGasDataMonth> TpsandGasDataMonths { get; set; }
-        public virtual DbSet<TpsandGasDataWeek> TpsandGasDataWeeks { get; set; }
-        public virtual DbSet<TpsandGasDataLatest> TpsandGasDataLatests { get; set; }
+        public virtual DbSet<TpsDataDay> TpsDataDays { get; set; }
+        public virtual DbSet<TpsDataHour> TpsDataHours { get; set; }
+        public virtual DbSet<TpsDataMax> TpsDataMaxes { get; set; }
+        public virtual DbSet<TpsDataMonth> TpsDataMonths { get; set; }
+        public virtual DbSet<TpsDataWeek> TpsDataWeeks { get; set; }
+        public virtual DbSet<TpsDataLatest> TpsDataLatests { get; set; }
         public virtual DbSet<OldestLoggedHistoricalEntry> OldestLoggedHistoricalEntries { get; set; }
-        public virtual DbSet<TpsandGasDataYear> TpsandGasDataYears { get; set; }
-        public virtual DbSet<TpsandGasDataAll> TpsandGasDataAlls { get; set; }
+        public virtual DbSet<TpsDataYear> TpsDataYears { get; set; }
+        public virtual DbSet<TpsDataAll> TpsDataAlls { get; set; }
         public virtual DbSet<TimeWarpDataDay> TimeWarpDataDays { get; set; }
         public virtual DbSet<TimeWarpDataHour> TimeWarpDataHours { get; set; }
         public virtual DbSet<TimeWarpDataMinute> TimeWarpDataMinutes { get; set; }
@@ -55,8 +55,6 @@ namespace CryptoTPS.Data.Database
                 entity.ToTable("TimeWarpData_Day");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
-
-                entity.Property(e => e.AverageGps).HasColumnName("AverageGPS");
 
                 entity.Property(e => e.AverageTps).HasColumnName("AverageTPS");
 
@@ -81,7 +79,7 @@ namespace CryptoTPS.Data.Database
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.AverageGps).HasColumnName("AverageGPS");
+                
 
                 entity.Property(e => e.AverageTps).HasColumnName("AverageTPS");
 
@@ -106,7 +104,7 @@ namespace CryptoTPS.Data.Database
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.AverageGps).HasColumnName("AverageGPS");
+                
 
                 entity.Property(e => e.AverageTps).HasColumnName("AverageTPS");
 
@@ -131,7 +129,7 @@ namespace CryptoTPS.Data.Database
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.AverageGps).HasColumnName("AverageGPS");
+                
 
                 entity.Property(e => e.AverageTps).HasColumnName("AverageTPS");
 
@@ -154,7 +152,7 @@ namespace CryptoTPS.Data.Database
             {
                 entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.AverageGps).HasColumnName("AverageGPS");
+                
 
                 entity.Property(e => e.AverageTps).HasColumnName("AverageTPS");
 
@@ -208,51 +206,47 @@ namespace CryptoTPS.Data.Database
                     .HasConstraintName("FK__OldestLog__Provi__01142BA1");
             });
 
-            modelBuilder.Entity<TpsandGasDataYear>(entity =>
+            modelBuilder.Entity<TpsDataYear>(entity =>
             {
                 entity.ToTable("TPSAndGasData_Year");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.AverageGps).HasColumnName("AverageGPS");
-
                 entity.Property(e => e.AverageTps).HasColumnName("AverageTPS");
 
                 entity.Property(e => e.StartDate).HasColumnType("datetime");
 
                 entity.HasOne(d => d.NetworkNavigation)
-                    .WithMany(p => p.TpsandGasDataYears)
+                    .WithMany(p => p.TpsDataYears)
                     .HasForeignKey(d => d.Network)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TPSAndGas__Netwo__7C4F7684");
 
                 entity.HasOne(d => d.ProviderNavigation)
-                    .WithMany(p => p.TpsandGasDataYears)
+                    .WithMany(p => p.TpsDataYears)
                     .HasForeignKey(d => d.Provider)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TPSAndGas__Provi__7B5B524B");
             });
 
-            modelBuilder.Entity<TpsandGasDataAll>(entity =>
+            modelBuilder.Entity<TpsDataAll>(entity =>
             {
                 entity.ToTable("TPSAndGasData_All");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
-
-                entity.Property(e => e.AverageGps).HasColumnName("AverageGPS");
 
                 entity.Property(e => e.AverageTps).HasColumnName("AverageTPS");
 
                 entity.Property(e => e.StartDate).HasColumnType("datetime");
 
                 entity.HasOne(d => d.NetworkNavigation)
-                    .WithMany(p => p.TpsandGasDataAlls)
+                    .WithMany(p => p.TpsDataAlls)
                     .HasForeignKey(d => d.Network)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TPSAndGas__Netwo__7E37BEF6");
 
                 entity.HasOne(d => d.ProviderNavigation)
-                    .WithMany(p => p.TpsandGasDataAlls)
+                    .WithMany(p => p.TpsDataAlls)
                     .HasForeignKey(d => d.Provider)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TPSAndGas__Provi__7D439ABD");
@@ -299,24 +293,22 @@ namespace CryptoTPS.Data.Database
                     .HasMaxLength(255);
             });
 
-            modelBuilder.Entity<TpsandGasDataLatest>(entity =>
+            modelBuilder.Entity<TpsDataLatest>(entity =>
             {
                 entity.ToTable("TPSAndGasData_Latest");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.Gps).HasColumnName("GPS");
-
                 entity.Property(e => e.Tps).HasColumnName("TPS");
 
                 entity.HasOne(d => d.NetworkNavigation)
-                    .WithMany(p => p.TpsandGasDataLatests)
+                    .WithMany(p => p.TpsDataLatests)
                     .HasForeignKey(d => d.Network)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TPSAndGas__Netwo__787EE5A0");
 
                 entity.HasOne(d => d.ProviderNavigation)
-                    .WithMany(p => p.TpsandGasDataLatests)
+                    .WithMany(p => p.TpsDataLatests)
                     .HasForeignKey(d => d.Provider)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TPSAndGas__Provi__778AC167");
@@ -368,57 +360,53 @@ namespace CryptoTPS.Data.Database
                     .HasMaxLength(255);
             });
 
-            modelBuilder.Entity<TpsandGasDataDay>(entity =>
+            modelBuilder.Entity<TpsDataDay>(entity =>
             {
                 entity.ToTable("TPSAndGasData_Day");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.AverageGps).HasColumnName("AverageGPS");
-
                 entity.Property(e => e.AverageTps).HasColumnName("AverageTPS");
 
                 entity.Property(e => e.StartDate).HasColumnType("datetime");
 
                 entity.HasOne(d => d.NetworkNavigation)
-                    .WithMany(p => p.TpsandGasDataDays)
+                    .WithMany(p => p.TpsDataDays)
                     .HasForeignKey(d => d.Network)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TPSAndGas__Netwo__48CFD27E");
 
                 entity.HasOne(d => d.ProviderNavigation)
-                    .WithMany(p => p.TpsandGasDataDays)
+                    .WithMany(p => p.TpsDataDays)
                     .HasForeignKey(d => d.Provider)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TPSAndGas__Provi__47DBAE45");
             });
 
-            modelBuilder.Entity<TpsandGasDataHour>(entity =>
+            modelBuilder.Entity<TpsDataHour>(entity =>
             {
                 entity.ToTable("TPSAndGasData_Hour");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
-
-                entity.Property(e => e.AverageGps).HasColumnName("AverageGPS");
 
                 entity.Property(e => e.AverageTps).HasColumnName("AverageTPS");
 
                 entity.Property(e => e.StartDate).HasColumnType("datetime");
 
                 entity.HasOne(d => d.NetworkNavigation)
-                    .WithMany(p => p.TpsandGasDataHours)
+                    .WithMany(p => p.TpsDataHours)
                     .HasForeignKey(d => d.Network)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TPSAndGas__Netwo__46E78A0C");
 
                 entity.HasOne(d => d.ProviderNavigation)
-                    .WithMany(p => p.TpsandGasDataHours)
+                    .WithMany(p => p.TpsDataHours)
                     .HasForeignKey(d => d.Provider)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TPSAndGas__Provi__45F365D3");
             });
 
-            modelBuilder.Entity<TpsandGasDataMax>(entity =>
+            modelBuilder.Entity<TpsDataMax>(entity =>
             {
                 entity.ToTable("TPSAndGasData_Max");
 
@@ -426,68 +414,62 @@ namespace CryptoTPS.Data.Database
 
                 entity.Property(e => e.Date).HasColumnType("datetime");
 
-                entity.Property(e => e.MaxGps).HasColumnName("MaxGPS");
-
                 entity.Property(e => e.MaxTps).HasColumnName("MaxTPS");
 
                 entity.HasOne(d => d.NetworkNavigation)
-                    .WithMany(p => p.TpsandGasDataMaxes)
+                    .WithMany(p => p.TpsDataMaxes)
                     .HasForeignKey(d => d.Network)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TPSAndGas__Netwo__44FF419A");
 
                 entity.HasOne(d => d.ProviderNavigation)
-                    .WithMany(p => p.TpsandGasDataMaxes)
+                    .WithMany(p => p.TpsDataMaxes)
                     .HasForeignKey(d => d.Provider)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TPSAndGas__Provi__440B1D61");
             });
 
-            modelBuilder.Entity<TpsandGasDataMonth>(entity =>
+            modelBuilder.Entity<TpsDataMonth>(entity =>
             {
                 entity.ToTable("TPSAndGasData_Month");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.AverageGps).HasColumnName("AverageGPS");
-
                 entity.Property(e => e.AverageTps).HasColumnName("AverageTPS");
 
                 entity.Property(e => e.StartDate).HasColumnType("datetime");
 
                 entity.HasOne(d => d.NetworkNavigation)
-                    .WithMany(p => p.TpsandGasDataMonths)
+                    .WithMany(p => p.TpsDataMonths)
                     .HasForeignKey(d => d.Network)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TPSAndGas__Netwo__4CA06362");
 
                 entity.HasOne(d => d.ProviderNavigation)
-                    .WithMany(p => p.TpsandGasDataMonths)
+                    .WithMany(p => p.TpsDataMonths)
                     .HasForeignKey(d => d.Provider)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TPSAndGas__Provi__4BAC3F29");
             });
 
-            modelBuilder.Entity<TpsandGasDataWeek>(entity =>
+            modelBuilder.Entity<TpsDataWeek>(entity =>
             {
                 entity.ToTable("TPSAndGasData_Week");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
-
-                entity.Property(e => e.AverageGps).HasColumnName("AverageGPS");
 
                 entity.Property(e => e.AverageTps).HasColumnName("AverageTPS");
 
                 entity.Property(e => e.StartDate).HasColumnType("datetime");
 
                 entity.HasOne(d => d.NetworkNavigation)
-                    .WithMany(p => p.TpsandGasDataWeeks)
+                    .WithMany(p => p.TpsDataWeeks)
                     .HasForeignKey(d => d.Network)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TPSAndGas__Netwo__4AB81AF0");
 
                 entity.HasOne(d => d.ProviderNavigation)
-                    .WithMany(p => p.TpsandGasDataWeeks)
+                    .WithMany(p => p.TpsDataWeeks)
                     .HasForeignKey(d => d.Provider)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TPSAndGas__Provi__49C3F6B7");

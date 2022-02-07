@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace CryptoTPS.Data.Database.HistoricalDataProviders
 {
-    public class OneDayHistoricalDataProvider : HistoricalDataProviderBase<TpsandGasDataDay>
+    public class OneDayHistoricalDataProvider : HistoricalDataProviderBase<TpsDataDay>
     {
-        public OneDayHistoricalDataProvider(CryptoTPSContext context) : base("OneDay", context, x => x.TpsandGasDataDays, TimeSpan.FromDays(1))
+        public OneDayHistoricalDataProvider(CryptoTPSContext context) : base("OneDay", context, x => x.TpsDataDays, TimeSpan.FromDays(1))
         {
 
         }

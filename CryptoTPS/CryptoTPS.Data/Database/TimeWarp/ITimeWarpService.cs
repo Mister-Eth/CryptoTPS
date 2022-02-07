@@ -12,8 +12,6 @@ namespace CryptoTPS.Data.Database.TimeWarp
     {
         public DateTime GetEarliestDate();
         public IEnumerable<DataPoint> GetTPSAt(long timestamp, string network, int count);
-        public IEnumerable<DataPoint> GetGPSAt(long timestamp, string network, int count);
-        public IEnumerable<DataPoint> GetGasAdjustedTPSAt(long timestamp, string network, int count);
         public Task<TimeWarpSyncProgressModel> GetSyncProgress(string provider, string network);
     }
 }

@@ -31,16 +31,6 @@ namespace CryptoTPS.Data.Database.TimeWarp
             throw new NotImplementedException();
         }
 
-        public IEnumerable<DataPoint> GetGasAdjustedTPSAt(long timestamp, string network, int count)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<DataPoint> GetGPSAt(long timestamp, string network, int count)
-        {
-            throw new NotImplementedException();
-        }
-
         public Task<TimeWarpSyncProgressModel> GetSyncProgress(string provider, string network)
         {
             throw new NotImplementedException();

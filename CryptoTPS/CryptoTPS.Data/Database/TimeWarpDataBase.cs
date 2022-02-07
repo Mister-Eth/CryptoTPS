@@ -13,7 +13,6 @@ namespace CryptoTPS.Data.Database
         public int? Block { get; set; }
         public DateTime StartDate { get; set; }
         public double AverageTps { get; set; }
-        public double AverageGps { get; set; }
 
         public virtual Network NetworkNavigation { get; set; }
         public virtual Provider ProviderNavigation { get; set; }

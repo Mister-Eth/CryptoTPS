@@ -50,7 +50,6 @@ namespace CryptoTPS.API
                                   builder =>
                                   {
                                       builder.WithOrigins("https://CryptoTPS.info");
-                                      builder.WithOrigins("https://ultrasound.money/");
                                       builder.WithOrigins("http://localhost:3007");
                                       builder.AllowAnyHeader();
                                   });

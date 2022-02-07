@@ -43,11 +43,10 @@ namespace CryptoTPS.Services.BlockchainServices
                     var stopwatch = new System.Diagnostics.Stopwatch();
                     stopwatch.Start();
 
-                    var delta = await CalculateTPSGPSAsync(oldestEntry.OldestBlock);
+                    var delta = await CalculateTPSAsync(oldestEntry.OldestBlock);
                     UpdateMaxEntry(delta);
                     _context.TimeWarpData.Add(new TimeWarpDatum()
                     {
-                        AverageGps = delta.GPS,
                         AverageTps = delta.TPS,
                         Block = delta.BlockNumber,
                         StartDate = delta.Date,
@@ -57,7 +56,7 @@ namespace CryptoTPS.Services.BlockchainServices
 
                     stopwatch.Stop();
                     var eta = TimeSpan.FromMilliseconds(oldestEntry.OldestBlock * (stopwatch.Elapsed.TotalMilliseconds + 1000));
-                    _logger.LogInformation($"{_provider} [{oldestEntry.OldestBlock}] @{delta.Date} ETA: [{eta}] {delta.TPS}TPS {delta.GPS}GPS");
+                    _logger.LogInformation($"{_provider} [{oldestEntry.OldestBlock}] @{delta.Date} ETA: [{eta}] {delta.TPS}TPS");
                     await Task.Delay(1000);
                 }
                 catch(Exception e)

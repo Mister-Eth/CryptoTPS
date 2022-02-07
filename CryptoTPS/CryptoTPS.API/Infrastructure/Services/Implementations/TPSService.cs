@@ -25,7 +25,7 @@ namespace CryptoTPS.API.Infrastructure.Services.Implementations
                 var providers = (provider.ToUpper() == "ALL") ? Context.Providers.AsEnumerable() : new Provider[] { Context.Providers.First(x => x.Name.ToUpper() == provider.ToUpper()) };
                 foreach (var p in providers.ToArray())
                 {
-                    var entry = Context.TpsandGasDataMaxes.FirstOrDefault(x => x.Provider == p.Id && x.NetworkNavigation.Name == network);
+                    var entry = Context.TpsDataMaxes.FirstOrDefault(x => x.Provider == p.Id && x.NetworkNavigation.Name == network);
                     if (entry != null)
                     {
                         result.Add(new DataResponseModel()
@@ -124,9 +124,9 @@ namespace CryptoTPS.API.Infrastructure.Services.Implementations
                             continue;
                         }
                     }
-                    if (Context.TpsandGasDataLatests.Any(x => x.Provider == p.Id))
+                    if (Context.TpsDataLatests.Any(x => x.Provider == p.Id))
                     {
-                        var entry = Context.TpsandGasDataLatests.First(x => x.Provider == p.Id);
+                        var entry = Context.TpsDataLatests.First(x => x.Provider == p.Id);
                         result.Add(new DataResponseModel()
                         {
                             Provider = p.Name,

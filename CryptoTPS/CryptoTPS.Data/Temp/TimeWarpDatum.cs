@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CryptoTPS.Data.Database
+#nullable disable
+
+namespace CryptoTPS.Data.Temp
 {
-    public abstract class TPSAndGasDataBase
+    public partial class TimeWarpDatum
     {
         public int Id { get; set; }
         public int Network { get; set; }
         public int Provider { get; set; }
-        public virtual Network NetworkNavigation { get; set; }
+        public int? Block { get; set; }
+        public DateTime StartDate { get; set; }
+        public double AverageTps { get; set; }
+
         public virtual Provider ProviderNavigation { get; set; }
     }
 }

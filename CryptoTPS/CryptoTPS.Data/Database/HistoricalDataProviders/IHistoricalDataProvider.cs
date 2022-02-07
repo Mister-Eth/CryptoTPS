@@ -8,7 +8,7 @@ namespace CryptoTPS.Data.Database.HistoricalDataProviders
 {
     public interface IHistoricalDataProvider
     {
-        public IEnumerable<TimedTPSAndGasData> GetData(string provider, string network);
+        public IEnumerable<TimedTPSData> GetData(string provider, string network);
         public string Interval { get; }
     }
 }

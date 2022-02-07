@@ -33,18 +33,6 @@ namespace CryptoTPS.API.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<DataPoint> GetGasAdjustedTPSAt(long timestamp, string network = "Mainnet", int count = 30)
-        {
-            return ((ITimeWarpService)_timeWarpService).GetGasAdjustedTPSAt(timestamp, network, count);
-        }
-
-        [HttpGet]
-        public IEnumerable<DataPoint> GetGPSAt(long timestamp, string network = "Mainnet", int count = 30)
-        {
-            return ((ITimeWarpService)_timeWarpService).GetGPSAt(timestamp, network, count);
-        }
-
-        [HttpGet]
         public Task<TimeWarpSyncProgressModel> GetSyncProgress(string provider, string network)
         {
             return ((ITimeWarpService)_timeWarpService).GetSyncProgress(provider, network);

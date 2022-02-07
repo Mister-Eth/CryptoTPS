@@ -27,12 +27,6 @@ namespace CryptoTPS.API.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<string> Networks()
-        {
-            return _generalService.Networks();
-        }
-
-        [HttpGet]
         public IEnumerable<string> Intervals()
         {
             return _generalService.Intervals();

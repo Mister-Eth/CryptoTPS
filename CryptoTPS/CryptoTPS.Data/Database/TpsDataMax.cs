@@ -5,10 +5,9 @@ using System.Collections.Generic;
 
 namespace CryptoTPS.Data.Database
 {
-    public partial class TpsandGasDataMax : TPSAndGasDataBase
+    public partial class TpsDataMax : TPSDataBase
     {
         public DateTime Date { get; set; }
         public double MaxTps { get; set; }
-        public double MaxGps { get; set; }
     }
 }

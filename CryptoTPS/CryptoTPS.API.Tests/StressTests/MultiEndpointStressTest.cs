@@ -25,7 +25,6 @@ namespace CryptoTPS.API.Tests.StressTests
             {
                 "/API/v2/InstantData?includeSidechains=true",
                 "/API/TPS/Get?provider=All&interval=OneHour&network=Mainnet&includeSidechains=true",
-                "/API/GPS/Get?provider=All&interval=OneHour&network=Mainnet&includeSidechains=true",
                 "/API/v2/ProviderTypesColorDictionary",
                 "/API/v2/ColorDictionary",
                 "/API/v2/Networks",
