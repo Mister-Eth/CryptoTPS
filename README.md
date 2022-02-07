@@ -1,5 +1,5 @@
-# ETHTPS
-Aggregated Ethereum TPS data for L2s and sidechains
+# CryptoTPS
+Aggregated TPS data for all blockchains
 
 # Frontend
 
@@ -9,11 +9,11 @@ Setup:
 
 1. Clone the repository
 
-  ```git clone --branch dev https://github.com/Mister-Eth/ETHTPS```
+  ```git clone --branch dev https://github.com/Mister-Eth/CryptoTPS```
   
 2. CD to the frontend directory
 
-  ```cd ETHTPS/Frontend```
+  ```cd React/cryptotps.frontend```
   
 3. Install the dependencies
 
