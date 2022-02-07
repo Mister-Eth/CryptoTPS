@@ -1,4 +1,4 @@
-﻿using ETHTPS.Data.Database;
+﻿using CryptoTPS.Data.Database;
 
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -9,13 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices.Status.BackgroundTasks.Discord
+namespace CryptoTPS.Services.BlockchainServices.Status.BackgroundTasks.Discord
 {
     public class UpdaterStatusBackgroundTask : BackgroundTaskWithNotifier
     {
         private readonly IBlockInfoProviderStatusService _blockInfoProviderStatusService;
 
-        public UpdaterStatusBackgroundTask(ILogger<HangfireBackgroundService> logger, ETHTPSContext context, IConfiguration configuration, IBlockInfoProviderStatusService blockInfoProviderStatusService) : base(logger, context, configuration)
+        public UpdaterStatusBackgroundTask(ILogger<HangfireBackgroundService> logger, CryptoTPSContext context, IConfiguration configuration, IBlockInfoProviderStatusService blockInfoProviderStatusService) : base(logger, context, configuration)
         {
             _blockInfoProviderStatusService = blockInfoProviderStatusService;
         }

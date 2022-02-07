@@ -1,6 +1,6 @@
-﻿using ETHTPS.Data.Extensions;
-using ETHTPS.Services.BlockchainServices.Models.JSONRPC;
-using ETHTPS.Services.Infrastructure.Serialization;
+﻿using CryptoTPS.Data.Extensions;
+using CryptoTPS.Services.BlockchainServices.Models.JSONRPC;
+using CryptoTPS.Services.Infrastructure.Serialization;
 
 using Microsoft.Extensions.Configuration;
 
@@ -14,7 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace ETHTPS.Services.BlockchainServices
+namespace CryptoTPS.Services.BlockchainServices
 {
     public abstract class JSONRPCBlockInfoProviderBase : IBlockInfoProvider
     {

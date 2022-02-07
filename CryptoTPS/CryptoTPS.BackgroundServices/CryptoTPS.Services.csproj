@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ETHTPS.Data\ETHTPS.Data.csproj" />
+    <ProjectReference Include="..\CryptoTPS.Data\CryptoTPS.Data.csproj" />
   </ItemGroup>
 
 </Project>

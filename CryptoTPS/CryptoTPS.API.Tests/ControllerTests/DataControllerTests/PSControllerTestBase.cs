@@ -1,6 +1,6 @@
-﻿using ETHTPS.API.Infrastructure.Services;
-using ETHTPS.Data.Database;
-using ETHTPS.Data.ResponseModels;
+﻿using CryptoTPS.API.Infrastructure.Services;
+using CryptoTPS.Data.Database;
+using CryptoTPS.Data.ResponseModels;
 
 using NUnit.Framework;
 
@@ -10,18 +10,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.API.Tests.ControllerTests.DataControllerTests
+namespace CryptoTPS.API.Tests.ControllerTests.DataControllerTests
 {
     [TestFixture]
     public abstract class PSControllerTestBase<TDataPoint, TResponseModel>
     {
         private readonly IPSController<DataPoint, DataResponseModel> _controller;
-        private readonly ETHTPSContext _context;
+        private readonly CryptoTPSContext _context;
         private IEnumerable<string> _providers;
         private IEnumerable<string> _networks;
         private IEnumerable<string> _intervals;
 
-        protected PSControllerTestBase(IPSController<DataPoint, DataResponseModel> controller, ETHTPSContext context)
+        protected PSControllerTestBase(IPSController<DataPoint, DataResponseModel> controller, CryptoTPSContext context)
         {
             _controller = controller;
             _context = context;

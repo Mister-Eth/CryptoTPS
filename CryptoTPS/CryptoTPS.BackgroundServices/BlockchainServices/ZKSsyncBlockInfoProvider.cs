@@ -1,4 +1,4 @@
-﻿using ETHTPS.Data.Extensions;
+﻿using CryptoTPS.Data.Extensions;
 
 using Newtonsoft.Json;
 
@@ -9,7 +9,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices
+namespace CryptoTPS.Services.BlockchainServices
 {
     [Provider("ZKSync")]
     public class ZKSsyncBlockInfoProvider : IBlockInfoProvider

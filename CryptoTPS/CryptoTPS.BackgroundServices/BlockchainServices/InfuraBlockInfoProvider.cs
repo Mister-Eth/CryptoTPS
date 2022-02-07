@@ -1,7 +1,7 @@
-﻿using ETHTPS.Data.Extensions;
-using ETHTPS.Services.BlockchainServices.BlockTime;
-using ETHTPS.Services.BlockchainServices.Models.JSONRPC;
-using ETHTPS.Services.Infrastructure.Serialization;
+﻿using CryptoTPS.Data.Extensions;
+using CryptoTPS.Services.BlockchainServices.BlockTime;
+using CryptoTPS.Services.BlockchainServices.Models.JSONRPC;
+using CryptoTPS.Services.Infrastructure.Serialization;
 
 using Microsoft.Extensions.Configuration;
 
@@ -14,7 +14,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices
+namespace CryptoTPS.Services.BlockchainServices
 {
     [Provider("Ethereum")]
     public class InfuraBlockInfoProvider : JSONRPCBlockInfoProviderBase

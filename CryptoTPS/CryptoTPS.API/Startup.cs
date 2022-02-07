@@ -1,9 +1,9 @@
 
 
-using ETHTPS.API.Middlewares;
-using ETHTPS.Services;
-using ETHTPS.Services.Infrastructure.Extensions;
-using ETHTPS.Data.Database;
+using CryptoTPS.API.Middlewares;
+using CryptoTPS.Services;
+using CryptoTPS.Services.Infrastructure.Extensions;
+using CryptoTPS.Data.Database;
 
 using Hangfire;
 using Hangfire.SqlServer;
@@ -18,17 +18,17 @@ using Microsoft.Extensions.Hosting;
 
 using System;
 using System.Linq;
-using ETHTPS.Services.BlockchainServices.Scan.Implementations;
-using ETHTPS.Services.BlockchainServices;
-using ETHTPS.Services.BlockchainServices.Scan;
-using ETHTPS.Data.Database.HistoricalDataProviders;
-using ETHTPS.API.Infrastructure.Services;
-using ETHTPS.API.Infrastructure.Services.Implementations;
-using ETHTPS.Services.BlockchainServices.Status;
-using ETHTPS.Services.BlockchainServices.Status.BackgroundTasks.Discord;
-using ETHTPS.Services.BlockchainServices.BlockTime;
+using CryptoTPS.Services.BlockchainServices.Scan.Implementations;
+using CryptoTPS.Services.BlockchainServices;
+using CryptoTPS.Services.BlockchainServices.Scan;
+using CryptoTPS.Data.Database.HistoricalDataProviders;
+using CryptoTPS.API.Infrastructure.Services;
+using CryptoTPS.API.Infrastructure.Services.Implementations;
+using CryptoTPS.Services.BlockchainServices.Status;
+using CryptoTPS.Services.BlockchainServices.Status.BackgroundTasks.Discord;
+using CryptoTPS.Services.BlockchainServices.BlockTime;
 
-namespace ETHTPS.API
+namespace CryptoTPS.API
 {
     public class Startup
     {
@@ -50,7 +50,7 @@ namespace ETHTPS.API
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                   builder =>
                                   {
-                                      builder.WithOrigins("https://ethtps.info");
+                                      builder.WithOrigins("https://CryptoTPS.info");
                                       builder.WithOrigins("https://ultrasound.money/");
                                       builder.WithOrigins("http://localhost:3007");
                                       builder.AllowAnyHeader();
@@ -62,7 +62,7 @@ namespace ETHTPS.API
             {
                 c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
             });
-            services.AddDbContext<ETHTPSContext>(options => options.UseSqlServer(defaultConnectionString), ServiceLifetime.Transient);
+            services.AddDbContext<CryptoTPSContext>(options => options.UseSqlServer(defaultConnectionString), ServiceLifetime.Transient);
             services.AddMemoryCache();
 
             AddServices(services);
@@ -221,7 +221,7 @@ namespace ETHTPS.API
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ETHTPS API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "CryptoTPS API V1");
                 c.RoutePrefix = string.Empty;
             });
             app.UseRouting();

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices.BlockTime
+namespace CryptoTPS.Services.BlockchainServices.BlockTime
 {
     public interface IBlockTimeProvider
     {

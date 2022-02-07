@@ -1,18 +1,18 @@
-﻿using ETHTPS.Data;
-using ETHTPS.Data.Database;
+﻿using CryptoTPS.Data;
+using CryptoTPS.Data.Database;
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ETHTPS.API.Infrastructure
+namespace CryptoTPS.API.Infrastructure
 {
     public abstract class ContextServiceBase
     {
-        protected ETHTPSContext Context { get; private set; }
+        protected CryptoTPSContext Context { get; private set; }
 
-        protected ContextServiceBase(ETHTPSContext context)
+        protected ContextServiceBase(CryptoTPSContext context)
         {
             Context = context;
         }

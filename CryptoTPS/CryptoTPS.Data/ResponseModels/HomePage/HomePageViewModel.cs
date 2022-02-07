@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Data.ResponseModels.HomePage
+namespace CryptoTPS.Data.ResponseModels.HomePage
 {
     public class HomePageViewModel
     {

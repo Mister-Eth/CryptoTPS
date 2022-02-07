@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Data.Extensions
+namespace CryptoTPS.Data.Extensions
 {
     public static class LinqExtensions
     {

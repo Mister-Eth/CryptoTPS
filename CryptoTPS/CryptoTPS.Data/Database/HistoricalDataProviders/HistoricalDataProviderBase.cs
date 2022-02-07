@@ -1,4 +1,4 @@
-﻿using ETHTPS.Data.Extensions;
+﻿using CryptoTPS.Data.Extensions;
 
 using Microsoft.EntityFrameworkCore;
 
@@ -8,16 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Data.Database.HistoricalDataProviders
+namespace CryptoTPS.Data.Database.HistoricalDataProviders
 {
     public abstract class HistoricalDataProviderBase<TTargetHistoricalData> : IHistoricalDataProvider
         where TTargetHistoricalData: TimedTPSAndGasData
     {
-        private readonly ETHTPSContext _context;
-        private readonly Func<ETHTPSContext, DbSet<TTargetHistoricalData>> _dataSelector;
+        private readonly CryptoTPSContext _context;
+        private readonly Func<CryptoTPSContext, DbSet<TTargetHistoricalData>> _dataSelector;
         private readonly TimeSpan _maxAge;
 
-        protected HistoricalDataProviderBase(string interval, ETHTPSContext context, Func<ETHTPSContext, DbSet<TTargetHistoricalData>> dataSelector, TimeSpan maxAge)
+        protected HistoricalDataProviderBase(string interval, CryptoTPSContext context, Func<CryptoTPSContext, DbSet<TTargetHistoricalData>> dataSelector, TimeSpan maxAge)
         {
             Interval = interval;
             _context = context;

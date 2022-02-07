@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace ETHTPS.Data.Database
+namespace CryptoTPS.Data.Database
 {
     public partial class TpsandGasDataLatest : TPSAndGasDataBase
     {

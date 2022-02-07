@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices.Extensions
+namespace CryptoTPS.Services.BlockchainServices.Extensions
 {
     public static class AttributeExtensions
     {

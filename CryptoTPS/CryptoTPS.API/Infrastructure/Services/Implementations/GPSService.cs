@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-using ETHTPS.API.Infrastructure.Services;
-using ETHTPS.Data.Database;
-using ETHTPS.Data.Database.Extensions;
-using ETHTPS.Data.Database.HistoricalDataProviders;
-using ETHTPS.Data.ResponseModels;
+using CryptoTPS.API.Infrastructure.Services;
+using CryptoTPS.Data.Database;
+using CryptoTPS.Data.Database.Extensions;
+using CryptoTPS.Data.Database.HistoricalDataProviders;
+using CryptoTPS.Data.ResponseModels;
 
-namespace ETHTPS.API.Infrastructure.Services.Implementations
+namespace CryptoTPS.API.Infrastructure.Services.Implementations
 {
     public class GPSService : HistoricalMethodsServiceBase, IPSService
     {
-        public GPSService(ETHTPSContext context, IEnumerable<IHistoricalDataProvider> historicalDataProviders) : base(context, historicalDataProviders)
+        public GPSService(CryptoTPSContext context, IEnumerable<IHistoricalDataProvider> historicalDataProviders) : base(context, historicalDataProviders)
         {
         }
 

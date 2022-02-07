@@ -9,7 +9,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices.BlockTime
+namespace CryptoTPS.Services.BlockchainServices.BlockTime
 {
     public class EthereumBlockTimeProvider : IBlockTimeProvider
     {

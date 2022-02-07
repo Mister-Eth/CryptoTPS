@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices.Scan.Extensions
+namespace CryptoTPS.Services.BlockchainServices.Scan.Extensions
 {
     public static class QueryStringExtensions
     {

@@ -6,7 +6,7 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices.Status.BackgroundTasks.Discord
+namespace CryptoTPS.Services.BlockchainServices.Status.BackgroundTasks.Discord
 {
     public class DiscordWebhookNotifier
     {

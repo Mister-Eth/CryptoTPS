@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices.Scan
+namespace CryptoTPS.Services.BlockchainServices.Scan
 {
     public class GetBlockNumberByTimestampRequestModel : ScanRequestModel
     {

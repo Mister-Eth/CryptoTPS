@@ -1,6 +1,6 @@
 ﻿
 
-using ETHTPS.Data.Database;
+using CryptoTPS.Data.Database;
 
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
@@ -14,7 +14,7 @@ using System.Net;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace ETHTPS.API.Middlewares
+namespace CryptoTPS.API.Middlewares
 {
     public class AccesStatsMiddleware
     {
@@ -25,7 +25,7 @@ namespace ETHTPS.API.Middlewares
             _next = next;
         }
 
-        public async Task InvokeAsync(HttpContext context, ETHTPSContext dbContext, ILogger<AccesStatsMiddleware> logger, IConfiguration configuration)
+        public async Task InvokeAsync(HttpContext context, CryptoTPSContext dbContext, ILogger<AccesStatsMiddleware> logger, IConfiguration configuration)
         {
             var stopwatch = new Stopwatch();
             stopwatch.Start();

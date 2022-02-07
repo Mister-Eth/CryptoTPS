@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.Infrastructure.Serialization
+namespace CryptoTPS.Services.Infrastructure.Serialization
 {
     public class NullToEmptyListResolver : DefaultContractResolver
     {

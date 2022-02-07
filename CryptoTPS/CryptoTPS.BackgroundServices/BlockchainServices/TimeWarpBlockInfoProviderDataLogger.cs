@@ -1,5 +1,5 @@
-﻿using ETHTPS.Data.Database;
-using ETHTPS.Services.BlockchainServices.Extensions;
+﻿using CryptoTPS.Data.Database;
+using CryptoTPS.Services.BlockchainServices.Extensions;
 
 using Hangfire;
 
@@ -11,12 +11,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices
+namespace CryptoTPS.Services.BlockchainServices
 {
     public class TimeWarpBlockInfoProviderDataLogger<T> : HangfireBlockInfoProviderDataLogger<T>
         where T : IBlockInfoProvider
     {
-        public TimeWarpBlockInfoProviderDataLogger(T instance, ILogger<HangfireBackgroundService> logger, ETHTPSContext context) : base(instance, logger, context)
+        public TimeWarpBlockInfoProviderDataLogger(T instance, ILogger<HangfireBackgroundService> logger, CryptoTPSContext context) : base(instance, logger, context)
         {
 
         }

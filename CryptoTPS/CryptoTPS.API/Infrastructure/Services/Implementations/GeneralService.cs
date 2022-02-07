@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-using ETHTPS.Data;
-using ETHTPS.Data.Database;
-using ETHTPS.Data.Database.Extensions;
-using ETHTPS.Data.Database.HistoricalDataProviders;
-using ETHTPS.Data.ResponseModels;
-using ETHTPS.Data.ResponseModels.HomePage;
+using CryptoTPS.Data;
+using CryptoTPS.Data.Database;
+using CryptoTPS.Data.Database.Extensions;
+using CryptoTPS.Data.Database.HistoricalDataProviders;
+using CryptoTPS.Data.ResponseModels;
+using CryptoTPS.Data.ResponseModels.HomePage;
 
-namespace ETHTPS.API.Infrastructure.Services.Implementations
+namespace CryptoTPS.API.Infrastructure.Services.Implementations
 {
     public class GeneralService : HistoricalMethodsServiceBase
     {
@@ -18,7 +18,7 @@ namespace ETHTPS.API.Infrastructure.Services.Implementations
         private readonly GPSService _gpsService;
         private readonly GasAdjustedTPSService _gasAdjustedTPSService;
 
-        public GeneralService(TPSService tpsService, GPSService gpsService, GasAdjustedTPSService gasAdjustedTPSService, ETHTPSContext context, IEnumerable<IHistoricalDataProvider> historicalDataProviders) : base(context, historicalDataProviders)
+        public GeneralService(TPSService tpsService, GPSService gpsService, GasAdjustedTPSService gasAdjustedTPSService, CryptoTPSContext context, IEnumerable<IHistoricalDataProvider> historicalDataProviders) : base(context, historicalDataProviders)
         {
             _tpsService = tpsService;
             _gpsService = gpsService;

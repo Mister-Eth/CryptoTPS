@@ -1,6 +1,6 @@
-﻿using ETHTPS.Data.Database;
-using ETHTPS.Services.BlockchainServices;
-using ETHTPS.Services.BlockchainServices.Extensions;
+﻿using CryptoTPS.Data.Database;
+using CryptoTPS.Services.BlockchainServices;
+using CryptoTPS.Services.BlockchainServices.Extensions;
 
 using Hangfire;
 using Hangfire.Storage;
@@ -10,13 +10,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices.Status
+namespace CryptoTPS.Services.BlockchainServices.Status
 {
     public class BlockInfoProviderStatusService : IBlockInfoProviderStatusService
     {
-        private readonly ETHTPSContext _context;
+        private readonly CryptoTPSContext _context;
 
-        public BlockInfoProviderStatusService(ETHTPSContext context)
+        public BlockInfoProviderStatusService(CryptoTPSContext context)
         {
             _context = context;
         }

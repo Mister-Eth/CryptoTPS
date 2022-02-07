@@ -4,17 +4,17 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace ETHTPS.Data.Database
+namespace CryptoTPS.Data.Database
 {
-    public partial class ETHTPSContext : DbContext
+    public partial class CryptoTPSContext : DbContext
     {
         public readonly object LockObj = new object();
-        public ETHTPSContext()
+        public CryptoTPSContext()
         {
             Database.SetCommandTimeout(TimeSpan.FromSeconds(10));
         }
 
-        public ETHTPSContext(DbContextOptions<ETHTPSContext> options)
+        public CryptoTPSContext(DbContextOptions<CryptoTPSContext> options)
             : base(options)
         {
             //Database.SetCommandTimeout(TimeSpan.FromSeconds(60));

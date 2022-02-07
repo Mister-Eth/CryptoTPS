@@ -1,4 +1,4 @@
-﻿using ETHTPS.Data.Extensions;
+﻿using CryptoTPS.Data.Extensions;
 
 using Microsoft.Extensions.Configuration;
 
@@ -12,7 +12,7 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices
+namespace CryptoTPS.Services.BlockchainServices
 {
     /// <summary>
     /// Immutable X doesn't have blocks but we can work around this by getting all transactions made in the past minute and assuming they are part of a block.

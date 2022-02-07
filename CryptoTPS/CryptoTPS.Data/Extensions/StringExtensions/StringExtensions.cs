@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Data.Extensions.StringExtensions
+namespace CryptoTPS.Data.Extensions.StringExtensions
 {
     public static class StringExtensions
     {

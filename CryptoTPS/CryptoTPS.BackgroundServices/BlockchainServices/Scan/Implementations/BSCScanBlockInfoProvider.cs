@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices.Scan.Implementations
+namespace CryptoTPS.Services.BlockchainServices.Scan.Implementations
 {
     [Provider("Binance Smart Chain")]
     public class BSCScanBlockInfoProvider : ScanBlockInfoProviderBase

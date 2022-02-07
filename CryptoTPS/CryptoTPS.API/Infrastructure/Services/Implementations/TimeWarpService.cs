@@ -1,10 +1,10 @@
-﻿using ETHTPS.Data.Database;
-using ETHTPS.Data.Database.TimeWarp;
-using ETHTPS.Data.Database.TimeWarp.Models;
-using ETHTPS.Data.Extensions;
-using ETHTPS.Data.ResponseModels;
-using ETHTPS.Services;
-using ETHTPS.Services.BlockchainServices.Extensions;
+﻿using CryptoTPS.Data.Database;
+using CryptoTPS.Data.Database.TimeWarp;
+using CryptoTPS.Data.Database.TimeWarp.Models;
+using CryptoTPS.Data.Extensions;
+using CryptoTPS.Data.ResponseModels;
+using CryptoTPS.Services;
+using CryptoTPS.Services.BlockchainServices.Extensions;
 
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,14 +13,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ETHTPS.API.Infrastructure.Services.Implementations
+namespace CryptoTPS.API.Infrastructure.Services.Implementations
 {
     public class TimeWarpService : ITimeWarpService
     {
-        private readonly ETHTPSContext _context;
+        private readonly CryptoTPSContext _context;
         private readonly IServiceProvider _services;
 
-        public TimeWarpService(ETHTPSContext context, IServiceProvider services)
+        public TimeWarpService(CryptoTPSContext context, IServiceProvider services)
         {
             _context = context;
             _services = services;

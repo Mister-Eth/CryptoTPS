@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Data.Database.HistoricalDataProviders
+namespace CryptoTPS.Data.Database.HistoricalDataProviders
 {
     public class OneWeekHistoricalDataProvider : HistoricalDataProviderBase<TpsandGasDataWeek>
     {
-        public OneWeekHistoricalDataProvider(ETHTPSContext context) : base("OneWeek", context, x => x.TpsandGasDataWeeks, TimeSpan.FromDays(7))
+        public OneWeekHistoricalDataProvider(CryptoTPSContext context) : base("OneWeek", context, x => x.TpsandGasDataWeeks, TimeSpan.FromDays(7))
         {
 
         }

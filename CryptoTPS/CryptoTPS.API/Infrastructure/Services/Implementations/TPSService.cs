@@ -1,17 +1,17 @@
-﻿using ETHTPS.Data.Database;
-using ETHTPS.Data.Database.HistoricalDataProviders;
-using ETHTPS.Data.ResponseModels;
+﻿using CryptoTPS.Data.Database;
+using CryptoTPS.Data.Database.HistoricalDataProviders;
+using CryptoTPS.Data.ResponseModels;
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ETHTPS.API.Infrastructure.Services.Implementations
+namespace CryptoTPS.API.Infrastructure.Services.Implementations
 {
     public class TPSService : HistoricalMethodsServiceBase, IPSService
     {
-        public TPSService(ETHTPSContext context, IEnumerable<IHistoricalDataProvider> historicalDataProviders) : base(context, historicalDataProviders)
+        public TPSService(CryptoTPSContext context, IEnumerable<IHistoricalDataProvider> historicalDataProviders) : base(context, historicalDataProviders)
         {
 
         }

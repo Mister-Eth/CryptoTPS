@@ -1,7 +1,7 @@
 ﻿
-using ETHTPS.API.Infrastructure.Services;
-using ETHTPS.API.Infrastructure.Services.Implementations;
-using ETHTPS.Data.ResponseModels;
+using CryptoTPS.API.Infrastructure.Services;
+using CryptoTPS.API.Infrastructure.Services.Implementations;
+using CryptoTPS.Data.ResponseModels;
 
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ETHTPS.API.Controllers
+namespace CryptoTPS.API.Controllers
 {
     [Route("API/GasAdjustedTPS/[action]")]
     public class GasAdjustedTPSController : IPSService

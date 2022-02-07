@@ -1,4 +1,4 @@
-﻿using ETHTPS.Services.BlockchainServices;
+﻿using CryptoTPS.Services.BlockchainServices;
 
 using Hangfire;
 
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.Infrastructure.Extensions
+namespace CryptoTPS.Services.Infrastructure.Extensions
 {
     public static class BackgroundServiceExtensions
     {

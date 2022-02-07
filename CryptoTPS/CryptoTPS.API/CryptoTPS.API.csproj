@@ -32,8 +32,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ETHTPS.BackgroundServices\ETHTPS.Services.csproj" />
-    <ProjectReference Include="..\ETHTPS.Data\ETHTPS.Data.csproj" />
+    <ProjectReference Include="..\CryptoTPS.BackgroundServices\CryptoTPS.Services.csproj" />
+    <ProjectReference Include="..\CryptoTPS.Data\CryptoTPS.Data.csproj" />
   </ItemGroup>
 
 </Project>

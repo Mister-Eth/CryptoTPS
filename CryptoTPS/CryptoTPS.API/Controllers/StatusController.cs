@@ -1,4 +1,4 @@
-﻿using ETHTPS.Services.BlockchainServices.Status;
+﻿using CryptoTPS.Services.BlockchainServices.Status;
 
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ETHTPS.API.Controllers
+namespace CryptoTPS.API.Controllers
 {
     [Route("api/Status/[action]")]
     public class StatusController : IBlockInfoProviderStatusService

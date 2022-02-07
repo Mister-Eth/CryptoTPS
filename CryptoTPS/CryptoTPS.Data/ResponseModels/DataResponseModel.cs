@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Data.ResponseModels
+namespace CryptoTPS.Data.ResponseModels
 {
     public class DataResponseModel
     {

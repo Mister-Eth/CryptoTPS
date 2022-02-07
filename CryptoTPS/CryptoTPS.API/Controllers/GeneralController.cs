@@ -1,10 +1,10 @@
-﻿using ETHTPS.API.Infrastructure.Services.Implementations;
-using ETHTPS.Data;
-using ETHTPS.Data.Database;
-using ETHTPS.Data.Database.Extensions;
-using ETHTPS.Data.Database.HistoricalDataProviders;
-using ETHTPS.Data.ResponseModels;
-using ETHTPS.Data.ResponseModels.HomePage;
+﻿using CryptoTPS.API.Infrastructure.Services.Implementations;
+using CryptoTPS.Data;
+using CryptoTPS.Data.Database;
+using CryptoTPS.Data.Database.Extensions;
+using CryptoTPS.Data.Database.HistoricalDataProviders;
+using CryptoTPS.Data.ResponseModels;
+using CryptoTPS.Data.ResponseModels.HomePage;
 
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ETHTPS.API.Controllers
+namespace CryptoTPS.API.Controllers
 {
     [Route("API/v2/[action]")]
     public class GeneralController

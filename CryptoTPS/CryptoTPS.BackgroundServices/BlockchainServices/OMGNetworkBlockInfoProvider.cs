@@ -7,7 +7,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices
+namespace CryptoTPS.Services.BlockchainServices
 {
     [Provider("OMG Network")]
     public class OMGNetworkBlockInfoProvider : IBlockInfoProvider

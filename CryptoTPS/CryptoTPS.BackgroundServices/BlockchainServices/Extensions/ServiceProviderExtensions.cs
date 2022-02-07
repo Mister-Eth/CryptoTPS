@@ -1,4 +1,4 @@
-﻿using ETHTPS.Services.Extensions;
+﻿using CryptoTPS.Services.Extensions;
 
 using Microsoft.Extensions.DependencyInjection;
 
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices.Extensions
+namespace CryptoTPS.Services.BlockchainServices.Extensions
 {
     public static class ServiceProviderExtensions
     {

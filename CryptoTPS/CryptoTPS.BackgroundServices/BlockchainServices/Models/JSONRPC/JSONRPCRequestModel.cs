@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices.Models.JSONRPC
+namespace CryptoTPS.Services.BlockchainServices.Models.JSONRPC
 {
     public class JSONRPCRequestModel
     {

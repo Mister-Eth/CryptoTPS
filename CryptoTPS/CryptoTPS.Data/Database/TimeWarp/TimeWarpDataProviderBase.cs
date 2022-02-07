@@ -1,5 +1,5 @@
-﻿using ETHTPS.Data.Database.TimeWarp.Models;
-using ETHTPS.Data.ResponseModels;
+﻿using CryptoTPS.Data.Database.TimeWarp.Models;
+using CryptoTPS.Data.ResponseModels;
 
 using Microsoft.EntityFrameworkCore;
 
@@ -9,15 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Data.Database.TimeWarp
+namespace CryptoTPS.Data.Database.TimeWarp
 {
     public abstract class TimeWarpDataProviderBase<TTargetTimeWarpData> : ITimeWarpDataProvider
         where TTargetTimeWarpData: TimeWarpDataBase
     {
-        private readonly ETHTPSContext _context;
-        private readonly Func<ETHTPSContext, DbSet<TTargetTimeWarpData>> _dataSelector;
+        private readonly CryptoTPSContext _context;
+        private readonly Func<CryptoTPSContext, DbSet<TTargetTimeWarpData>> _dataSelector;
 
-        protected TimeWarpDataProviderBase(ETHTPSContext context, Func<ETHTPSContext, DbSet<TTargetTimeWarpData>> dataSelector, string interval)
+        protected TimeWarpDataProviderBase(CryptoTPSContext context, Func<CryptoTPSContext, DbSet<TTargetTimeWarpData>> dataSelector, string interval)
         {
             _context = context;
             _dataSelector = dataSelector;

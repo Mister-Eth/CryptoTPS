@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.Extensions
+namespace CryptoTPS.Services.Extensions
 {
     public static class ReflectionExtensions
     {

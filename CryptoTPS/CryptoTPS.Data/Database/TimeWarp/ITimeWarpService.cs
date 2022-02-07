@@ -1,12 +1,12 @@
-﻿using ETHTPS.Data.Database.TimeWarp.Models;
-using ETHTPS.Data.ResponseModels;
+﻿using CryptoTPS.Data.Database.TimeWarp.Models;
+using CryptoTPS.Data.ResponseModels;
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Data.Database.TimeWarp
+namespace CryptoTPS.Data.Database.TimeWarp
 {
     public interface ITimeWarpService
     {

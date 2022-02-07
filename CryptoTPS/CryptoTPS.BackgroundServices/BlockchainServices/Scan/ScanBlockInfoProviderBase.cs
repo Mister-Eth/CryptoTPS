@@ -1,5 +1,5 @@
-﻿using ETHTPS.Data.Extensions.StringExtensions;
-using ETHTPS.Services.BlockchainServices.Scan.Extensions;
+﻿using CryptoTPS.Data.Extensions.StringExtensions;
+using CryptoTPS.Services.BlockchainServices.Scan.Extensions;
 
 using Fizzler.Systems.HtmlAgilityPack;
 
@@ -16,7 +16,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices.Scan
+namespace CryptoTPS.Services.BlockchainServices.Scan
 {
     public abstract class ScanBlockInfoProviderBase : IBlockInfoProvider
     {

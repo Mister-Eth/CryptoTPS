@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Data.Database
+namespace CryptoTPS.Data.Database
 {
     public abstract class TimedTPSAndGasData : TPSAndGasDataBase
     {

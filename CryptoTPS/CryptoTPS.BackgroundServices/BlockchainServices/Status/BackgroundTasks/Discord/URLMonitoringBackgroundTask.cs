@@ -1,4 +1,4 @@
-﻿using ETHTPS.Data.Database;
+﻿using CryptoTPS.Data.Database;
 
 using Hangfire;
 
@@ -12,14 +12,14 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices.Status.BackgroundTasks.Discord
+namespace CryptoTPS.Services.BlockchainServices.Status.BackgroundTasks.Discord
 {
     public abstract class URLMonitoringBackgroundTask : BackgroundTaskWithNotifier
     {
         private readonly HttpClient _httpClient;
         private readonly string _url;
 
-        public URLMonitoringBackgroundTask(ILogger<HangfireBackgroundService> logger, ETHTPSContext context, IConfiguration configuration, string url) : base(logger, context, configuration)
+        public URLMonitoringBackgroundTask(ILogger<HangfireBackgroundService> logger, CryptoTPSContext context, IConfiguration configuration, string url) : base(logger, context, configuration)
         {
             _httpClient = new HttpClient();
             _url = url;

@@ -1,5 +1,5 @@
-﻿using ETHTPS.Services.BlockchainServices.Models.JSONRPC;
-using ETHTPS.Services.Infrastructure.Serialization;
+﻿using CryptoTPS.Services.BlockchainServices.Models.JSONRPC;
+using CryptoTPS.Services.Infrastructure.Serialization;
 
 using Fizzler.Systems.HtmlAgilityPack;
 
@@ -18,7 +18,7 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices
+namespace CryptoTPS.Services.BlockchainServices
 {
     [Provider("Metis")]
     public class MetisBlockInfoProvider : IBlockInfoProvider

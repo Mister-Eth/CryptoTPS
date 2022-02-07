@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ETHTPS.API\ETHTPS.API.csproj" />
+    <ProjectReference Include="..\CryptoTPS.API\CryptoTPS.API.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿using ETHTPS.Data.Extensions.StringExtensions;
+﻿using CryptoTPS.Data.Extensions.StringExtensions;
 
 using Fizzler.Systems.HtmlAgilityPack;
 
@@ -15,7 +15,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETHTPS.Services.BlockchainServices
+namespace CryptoTPS.Services.BlockchainServices
 {
     [Provider("XDAI")]
     public class XDAIBlockInfoProvider : IBlockInfoProvider

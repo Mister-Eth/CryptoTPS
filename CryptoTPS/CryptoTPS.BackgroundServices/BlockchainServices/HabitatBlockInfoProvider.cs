@@ -1,7 +1,7 @@
 ﻿
 using Microsoft.Extensions.Configuration;
 
-namespace ETHTPS.Services.BlockchainServices
+namespace CryptoTPS.Services.BlockchainServices
 {
     [Provider("Habitat")]
     public class HabitatBlockInfoProvider : JSONRPCBlockInfoProviderBase
