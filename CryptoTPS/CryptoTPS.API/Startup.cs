@@ -18,7 +18,6 @@ using Microsoft.Extensions.Hosting;
 
 using System;
 using System.Linq;
-using CryptoTPS.Services.BlockchainServices.Scan.Implementations;
 using CryptoTPS.Services.BlockchainServices;
 using CryptoTPS.Services.BlockchainServices.Scan;
 using CryptoTPS.Data.Database.HistoricalDataProviders;
@@ -129,7 +128,7 @@ namespace CryptoTPS.API
         {
             if (ConfigurationQueues.Contains(TIMEWARPUPDATERQUEUE))
             {
-                services.RegisterTimeWarpHangfireBackgroundService<TimeWarpBlockInfoProviderDataLogger<InfuraBlockInfoProvider>, InfuraBlockInfoProvider>(CronConstants.Never, TIMEWARPUPDATERQUEUE);
+
             }
         }
 

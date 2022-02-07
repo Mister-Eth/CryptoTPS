@@ -27,4 +27,8 @@
     <ProjectReference Include="..\CryptoTPS.Data\CryptoTPS.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="BlockchainServices\Scan\Implementations\" />
+  </ItemGroup>
+
 </Project>
