@@ -15,14 +15,10 @@ namespace CryptoTPS.API.Infrastructure.Services.Implementations
     public class GeneralService : HistoricalMethodsServiceBase
     {
         private readonly TPSService _tpsService;
-        private readonly GPSService _gpsService;
-        private readonly GasAdjustedTPSService _gasAdjustedTPSService;
 
-        public GeneralService(TPSService tpsService, GPSService gpsService, GasAdjustedTPSService gasAdjustedTPSService, CryptoTPSContext context, IEnumerable<IHistoricalDataProvider> historicalDataProviders) : base(context, historicalDataProviders)
+        public GeneralService(TPSService tpsService, CryptoTPSContext context, IEnumerable<IHistoricalDataProvider> historicalDataProviders) : base(context, historicalDataProviders)
         {
             _tpsService = tpsService;
-            _gpsService = gpsService;
-            _gasAdjustedTPSService = gasAdjustedTPSService;
         }
 
 
@@ -102,23 +98,14 @@ namespace CryptoTPS.API.Infrastructure.Services.Implementations
                 switch (interval)
                 {
                     case TimeInterval.Instant:
-                        result.LastData.Add("tps", _tpsService.Instant(includeSidechains));
-                        result.LastData.Add("gps", _gpsService.Instant(includeSidechains));
-                        result.LastData.Add("gasAdjustedTPS", _gasAdjustedTPSService.Instant(includeSidechains));
                         break;
                     case TimeInterval.OneWeek:
                         var nextInterval = TimeInterval.OneMonth;
                         result.LastData.Add("tps", _tpsService.Get("All", nextInterval.ToString(), network, includeSidechains).ToDictionary(x => x.Key, x => new List<DataPoint>() { new DataPoint() { Value = x.Value.TakeLast(7).Average(x=>(x.Data.FirstOrDefault()==null)?0: x.Data.FirstOrDefault().Value) } }));
-
-                        result.LastData.Add("gps", _gpsService.Get("All", nextInterval.ToString(), network, includeSidechains).ToDictionary(x => x.Key, x => new List<DataPoint>() { new DataPoint() { Value = x.Value.TakeLast(7).Average(x=>(x.Data.FirstOrDefault()==null)?0: x.Data.FirstOrDefault().Value) } }));
-
-                        result.LastData.Add("gasAdjustedTPS", _gasAdjustedTPSService.Get("All", nextInterval.ToString(), network, includeSidechains).ToDictionary(x => x.Key, x => new List<DataPoint>() { new DataPoint() { Value = x.Value.TakeLast(7).Average(x=>(x.Data.FirstOrDefault()==null)?0: x.Data.FirstOrDefault().Value) } }));
                         break;
                     default:
                         nextInterval = GetNextIntervalForInstantData(interval);
                         result.LastData.Add("tps", _tpsService.Get("All", nextInterval.ToString(), network, includeSidechains).ToDictionary(x => x.Key, x => new List<DataPoint>() { x.Value.LastOrDefault()?.Data.FirstOrDefault() }));
-                        result.LastData.Add("gps", _gpsService.Get("All", nextInterval.ToString(), network, includeSidechains).ToDictionary(x => x.Key, x => new List<DataPoint>() { x.Value.LastOrDefault()?.Data.FirstOrDefault() }));
-                        result.LastData.Add("gasAdjustedTPS", _gasAdjustedTPSService.Get("All", nextInterval.ToString(), network, includeSidechains).ToDictionary(x => x.Key, x => new List<DataPoint>() { x.Value.LastOrDefault()?.Data.FirstOrDefault() }));
                         break;
                 }
             }
@@ -147,10 +134,7 @@ namespace CryptoTPS.API.Infrastructure.Services.Implementations
             var result = new Dictionary<string, object>();
             lock (Context.LockObj)
             {
-                var maxGPS = _gpsService.Max(provider, network);
                 result.Add("tps", _tpsService.Max(provider, network));
-                result.Add("gps", maxGPS);
-                result.Add("gasAdjustedTPS", _gasAdjustedTPSService.Max(provider, network));
             }
             return result;
         }
@@ -198,8 +182,6 @@ namespace CryptoTPS.API.Infrastructure.Services.Implementations
                 }).ToArray(),
                 AllTPSData = Intervals().Select(interval => new { interval, data = _tpsService.Get(Constants.All, interval, network, true) }).ToDictionary(x => x.interval, x => x.data),
                 MaxData = Max(Constants.All, network),
-                AllGPSData = Intervals().Select(interval => new { interval, data = _gpsService.Get(Constants.All, interval, network, true) }).ToDictionary(x => x.interval, x => x.data),
-                AllGasAdjustedTPSData = Intervals().Select(interval => new { interval, data = _gasAdjustedTPSService.Get(Constants.All, interval, network, true) }).ToDictionary(x => x.interval, x => x.data),
             };
         }
 
