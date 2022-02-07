@@ -35,7 +35,6 @@ namespace CryptoTPS.API.Infrastructure.Services.Implementations
                     Name = x.Name,
                     Type = x.TypeNavigation.Name,
                     Color = x.Color,
-                    TheoreticalMaxTPS = x.TheoreticalMaxTps,
                     IsGeneralPurpose = (x.IsGeneralPurpose.HasValue) ? x.IsGeneralPurpose.Value == 1 : x.TypeNavigation.IsGeneralPurpose == 1
                 });
             }

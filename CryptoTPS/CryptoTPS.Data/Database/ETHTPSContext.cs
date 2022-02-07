@@ -333,8 +333,6 @@ namespace CryptoTPS.Data.Database
                     .IsRequired()
                     .HasMaxLength(255);
 
-                entity.Property(e => e.TheoreticalMaxTps).HasColumnName("TheoreticalMaxTPS");
-
                 entity.HasOne(d => d.TypeNavigation)
                     .WithMany(p => p.Providers)
                     .HasForeignKey(d => d.Type)

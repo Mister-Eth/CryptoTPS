@@ -116,8 +116,8 @@ namespace CryptoTPS.API
         {
             if (ConfigurationQueues.Contains(STATUSUPDATERQUEUE))
             {
-                services.RegisterHangfireBackgroundService<APIStatusBackgroundTask>(CronConstants.EveryMinute, STATUSUPDATERQUEUE);
-                services.RegisterHangfireBackgroundService<WebsiteStatusBackgroundTask>(CronConstants.EveryMinute, STATUSUPDATERQUEUE);
+                //services.RegisterHangfireBackgroundService<APIStatusBackgroundTask>(CronConstants.EveryMinute, STATUSUPDATERQUEUE);
+                //services.RegisterHangfireBackgroundService<WebsiteStatusBackgroundTask>(CronConstants.EveryMinute, STATUSUPDATERQUEUE);
                 //services.RegisterHangfireBackgroundService<UpdaterStatusBackgroundTask>(CronConstants.EveryMinute, STATUSUPDATERQUEUE);
                 services.RegisterHangfireBackgroundService<PlausibleVisitorCountBackgroundTask>(CronConstants.EveryMidnight, STATUSUPDATERQUEUE);
             }
