@@ -33,9 +33,12 @@ namespace CryptoTPS.API.Infrastructure.Services.Implementations
                 result = Context.Providers.ToList().Where(x => x.Enabled).Select(x => new ProviderResponseModel()
                 {
                     Name = x.Name,
-                    Type = x.TypeNavigation.Name,
                     Color = x.Color,
-                    IsGeneralPurpose = (x.IsGeneralPurpose.HasValue) ? x.IsGeneralPurpose.Value == 1 : x.TypeNavigation.IsGeneralPurpose == 1
+                    SubchainOf = (x.SubchainOf.HasValue)?new ProviderResponseModel()
+                    {
+                        Name = x.SubchainOfNavigation.Name,
+                        Color = x.SubchainOfNavigation.Color
+                    } :null
                 });
             }
             return result;
@@ -48,17 +51,6 @@ namespace CryptoTPS.API.Infrastructure.Services.Implementations
             lock (Context.LockObj)
             {
                 result = Context.Providers.Where(x => x.Enabled).ToDictionary(x => x.Name, x => x.Color);
-            }
-            return result;
-        }
-
-        
-        public IDictionary<string, string> ProviderTypesColorDictionary()
-        {
-            IDictionary<string, string> result;
-            lock (Context.LockObj)
-            {
-                result = Context.ProviderTypes.ToDictionary(x => x.Name, x => x.Color);
             }
             return result;
         }
@@ -164,8 +156,7 @@ namespace CryptoTPS.API.Infrastructure.Services.Implementations
             {
                 Providers = Context.Providers.Select(x => new ProviderModel()
                 {
-                    Name = x.Name,
-                    Type = x.TypeNavigation.Name
+                    Name = x.Name
                 }).ToArray(),
                 AllTPSData = Intervals().Select(interval => new { interval, data = _tpsService.Get(Constants.All, interval, network, true) }).ToDictionary(x => x.interval, x => x.data),
                 MaxData = Max(Constants.All, network),

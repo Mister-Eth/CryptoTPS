@@ -119,44 +119,6 @@
         }
       }
     },
-    "/API/v2/ProviderTypesColorDictionary": {
-      "get": {
-        "tags": [
-          "General"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "string"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "string"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/API/v2/InstantData": {
       "get": {
         "tags": [
@@ -986,12 +948,8 @@
             "type": "string",
             "nullable": true
           },
-          "type": {
-            "type": "string",
-            "nullable": true
-          },
-          "isGeneralPurpose": {
-            "type": "boolean"
+          "subchainOf": {
+            "$ref": "#/components/schemas/ProviderResponseModel"
           }
         },
         "additionalProperties": false

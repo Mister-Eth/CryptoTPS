@@ -70,13 +70,6 @@ namespace CryptoTPS.API.Infrastructure.Services.Implementations
                 {
                     foreach (var p in Context.Providers.ToList().Where(x => x.Enabled))
                     {
-                        if (!includeSidechains)
-                        {
-                            if (IsSidechain(p.Name))
-                            {
-                                continue;
-                            }
-                        }
                         result[p.Name] = GetHistoricalData(interval, p.Name, network).Select(x => new DataResponseModel()
                         {
                             Data = new List<DataPoint>()
@@ -117,13 +110,6 @@ namespace CryptoTPS.API.Infrastructure.Services.Implementations
             {
                 foreach (var p in Context.Providers.ToList().Where(x => x.Enabled))
                 {
-                    if (!includeSidechains)
-                    {
-                        if (p.TypeNavigation.Name == "Sidechain")
-                        {
-                            continue;
-                        }
-                    }
                     if (Context.TpsDataLatests.Any(x => x.Provider == p.Id))
                     {
                         var entry = Context.TpsDataLatests.First(x => x.Provider == p.Id);

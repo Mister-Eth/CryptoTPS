@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**aPIV2InstantDataGet**](GeneralApi.md#aPIV2InstantDataGet) | **GET** /API/v2/InstantData | 
 [**aPIV2IntervalsGet**](GeneralApi.md#aPIV2IntervalsGet) | **GET** /API/v2/Intervals | 
 [**aPIV2MaxGet**](GeneralApi.md#aPIV2MaxGet) | **GET** /API/v2/Max | 
-[**aPIV2ProviderTypesColorDictionaryGet**](GeneralApi.md#aPIV2ProviderTypesColorDictionaryGet) | **GET** /API/v2/ProviderTypesColorDictionary | 
 [**aPIV2ProvidersGet**](GeneralApi.md#aPIV2ProvidersGet) | **GET** /API/v2/Providers | 
 
 
@@ -318,45 +317,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **{String: Object}**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
-## aPIV2ProviderTypesColorDictionaryGet
-
-> {String: String} aPIV2ProviderTypesColorDictionaryGet()
-
-
-
-### Example
-
-```javascript
-import CryptoTpsApi from 'crypto_tps_api';
-
-let apiInstance = new CryptoTpsApi.GeneralApi();
-apiInstance.aPIV2ProviderTypesColorDictionaryGet((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-**{String: String}**
 
 ### Authorization
 

@@ -24,7 +24,6 @@ namespace CryptoTPS.Data.Database
         public virtual DbSet<CachedResponse> CachedResponses { get; set; }
         public virtual DbSet<Network> Networks { get; set; }
         public virtual DbSet<Provider> Providers { get; set; }
-        public virtual DbSet<ProviderType> ProviderTypes { get; set; }
         public virtual DbSet<TpsDataDay> TpsDataDays { get; set; }
         public virtual DbSet<TpsDataHour> TpsDataHours { get; set; }
         public virtual DbSet<TpsDataMax> TpsDataMaxes { get; set; }
@@ -334,24 +333,6 @@ namespace CryptoTPS.Data.Database
                     .WithMany(p => p.InverseSubchainOfNavigation)
                     .HasForeignKey(d => d.SubchainOf)
                     .HasConstraintName("FK__Providers__Subch__00200768");
-            });
-
-            modelBuilder.Entity<ProviderType>(entity =>
-            {
-                entity.HasIndex(e => e.Name, "UQ__Provider__737584F6267CCF6F")
-                    .IsUnique();
-
-                entity.Property(e => e.Id).HasColumnName("ID");
-
-                entity.Property(e => e.Color)
-                    .IsRequired()
-                    .HasMaxLength(16)
-                    .IsUnicode(false)
-                    .HasDefaultValueSql("('#')");
-
-                entity.Property(e => e.Name)
-                    .IsRequired()
-                    .HasMaxLength(255);
             });
 
             modelBuilder.Entity<TpsDataDay>(entity =>

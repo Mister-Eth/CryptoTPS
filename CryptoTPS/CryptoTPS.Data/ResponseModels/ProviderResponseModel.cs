@@ -10,7 +10,6 @@ namespace CryptoTPS.Data.ResponseModels
     {
         public string Name { get; set; }
         public string Color { get; set; }
-        public string Type { get; set; }
-        public bool IsGeneralPurpose { get; set; }
+        public ProviderResponseModel SubchainOf { get; set; }
     }
 }

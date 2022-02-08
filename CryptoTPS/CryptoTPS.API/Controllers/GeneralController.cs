@@ -46,12 +46,6 @@ namespace CryptoTPS.API.Controllers
         }
 
         [HttpGet]
-        public IDictionary<string, string> ProviderTypesColorDictionary()
-        {
-            return _generalService.ProviderTypesColorDictionary();
-        }
-
-        [HttpGet]
         public IDictionary<string, object> InstantData(bool includeSidechains = true, string network = "Mainnet", string smoothing = "")
         {
             return _generalService.InstantData(includeSidechains, network, smoothing);

@@ -31,12 +31,10 @@ namespace CryptoTPS.Data.Database
         public string Name { get; set; }
         public int Type { get; set; }
         public string Color { get; set; }
-        public int? IsGeneralPurpose { get; set; }
         public int? HistoricalAggregationDeltaBlock { get; set; }
         public bool Enabled { get; set; }
         public int? SubchainOf { get; set; }
 
-        public virtual ProviderType TypeNavigation { get; set; }
         public virtual ICollection<OldestLoggedHistoricalEntry> OldestLoggedHistoricalEntries { get; set; }
         public virtual ICollection<OldestLoggedTimeWarpBlock> OldestLoggedTimeWarpBlocks { get; set; }
         public virtual ICollection<TimeWarpDatum> TimeWarpData { get; set; }

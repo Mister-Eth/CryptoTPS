@@ -129,7 +129,6 @@ Class | Method | HTTP request | Description
 *CryptoTpsApi.GeneralApi* | [**aPIV2InstantDataGet**](docs/GeneralApi.md#aPIV2InstantDataGet) | **GET** /API/v2/InstantData | 
 *CryptoTpsApi.GeneralApi* | [**aPIV2IntervalsGet**](docs/GeneralApi.md#aPIV2IntervalsGet) | **GET** /API/v2/Intervals | 
 *CryptoTpsApi.GeneralApi* | [**aPIV2MaxGet**](docs/GeneralApi.md#aPIV2MaxGet) | **GET** /API/v2/Max | 
-*CryptoTpsApi.GeneralApi* | [**aPIV2ProviderTypesColorDictionaryGet**](docs/GeneralApi.md#aPIV2ProviderTypesColorDictionaryGet) | **GET** /API/v2/ProviderTypesColorDictionary | 
 *CryptoTpsApi.GeneralApi* | [**aPIV2ProvidersGet**](docs/GeneralApi.md#aPIV2ProvidersGet) | **GET** /API/v2/Providers | 
 *CryptoTpsApi.StatusApi* | [**apiStatusGetBlockInfoProviderStatusGet**](docs/StatusApi.md#apiStatusGetBlockInfoProviderStatusGet) | **GET** /api/Status/GetBlockInfoProviderStatus | 
 *CryptoTpsApi.TPSApi* | [**aPITPSGeMonthlyDataByYearGet**](docs/TPSApi.md#aPITPSGeMonthlyDataByYearGet) | **GET** /API/TPS/GeMonthlyDataByYear | 
