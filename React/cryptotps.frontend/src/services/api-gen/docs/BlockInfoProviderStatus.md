@@ -1,4 +1,4 @@
-# EthtpsApi.BlockInfoProviderStatus
+# CryptoTpsApi.BlockInfoProviderStatus
 
 ## Enum
 

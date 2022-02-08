@@ -1,6 +1,6 @@
 import 'fix-date';
 import * as React from "react";
-import { globalGPSApi, globalTPSApi, globalGasAdjustedTPSApi, globalGeneralApi } from '../../services/common'
+import {  globalTPSApi, globalGeneralApi } from '../../services/common'
 import IntervalSelector from "./IntervalSelector";
 import InfoTypeSelector from './InfoTypeSelector';
 import ScaleSelector from './ScaleSelector';
@@ -150,38 +150,6 @@ export default class HistoricalChart extends React.Component {
                   }
                 });
               }
-            break;
-          case 'gps':
-            if (year !== 0){
-              globalGPSApi.aPIGPSGeMonthlyDataByYearGet({provider: provider, year: year, network: network}, (err, data, res)=>{
-                if (data !== null){
-                  this.buildDatasets(data);
-                }
-              });
-            }
-            else{
-              globalGPSApi.aPIGPSGetGet({provider: provider, interval: this.transformIntervalName(interval), network: network}, (err,data,res)=>{
-                if (data !== null){
-                  this.buildDatasets(data);
-                }
-              });
-            }
-            break;
-          case 'gasAdjustedTPS':
-            if (year !== 0){
-              globalGasAdjustedTPSApi.aPIGasAdjustedTPSGeMonthlyDataByYearGet({provider: provider, year: year, network: network}, (err, data, res)=>{
-                if (data !== null){
-                  this.buildDatasets(data);
-                }
-              });
-            }
-            else{
-              globalGasAdjustedTPSApi.aPIGasAdjustedTPSGetGet({provider: provider, interval: this.transformIntervalName(interval), network: network}, (err,data,res)=>{
-                if (data !== null){
-                  this.buildDatasets(data);
-                }
-              });
-            }
             break;
         }
       }

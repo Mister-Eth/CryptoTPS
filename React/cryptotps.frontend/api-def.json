@@ -1,319 +1,10 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "ETHTPS.API",
+    "title": "CryptoTPS.API",
     "version": "1.0"
   },
   "paths": {
-    "/API/GasAdjustedTPS/GeMonthlyDataByYear": {
-      "get": {
-        "tags": [
-          "GasAdjustedTPS"
-        ],
-        "parameters": [
-          {
-            "name": "provider",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "year",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "network",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "Mainnet"
-            }
-          },
-          {
-            "name": "includeSidechains",
-            "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataResponseModel"
-                    }
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataResponseModel"
-                    }
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataResponseModel"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/API/GasAdjustedTPS/Get": {
-      "get": {
-        "tags": [
-          "GasAdjustedTPS"
-        ],
-        "parameters": [
-          {
-            "name": "provider",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interval",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "network",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "Mainnet"
-            }
-          },
-          {
-            "name": "includeSidechains",
-            "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataResponseModel"
-                    }
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataResponseModel"
-                    }
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataResponseModel"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/API/GasAdjustedTPS/Instant": {
-      "get": {
-        "tags": [
-          "GasAdjustedTPS"
-        ],
-        "parameters": [
-          {
-            "name": "includeSidechains",
-            "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataPoint"
-                    }
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataPoint"
-                    }
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataPoint"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/API/GasAdjustedTPS/Max": {
-      "get": {
-        "tags": [
-          "GasAdjustedTPS"
-        ],
-        "parameters": [
-          {
-            "name": "provider",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "network",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "Mainnet"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "$ref": "#/components/schemas/DataPoint"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "$ref": "#/components/schemas/DataPoint"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "$ref": "#/components/schemas/DataPoint"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/API/v2/Networks": {
-      "get": {
-        "tags": [
-          "General"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/API/v2/Intervals": {
       "get": {
         "tags": [
@@ -683,235 +374,12 @@
         }
       }
     },
-    "/API/GPS/GeMonthlyDataByYear": {
+    "/API/v2/AllData": {
       "get": {
         "tags": [
-          "GPS"
+          "General"
         ],
         "parameters": [
-          {
-            "name": "provider",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "year",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "network",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "Mainnet"
-            }
-          },
-          {
-            "name": "includeSidechains",
-            "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataResponseModel"
-                    }
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataResponseModel"
-                    }
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataResponseModel"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/API/GPS/Get": {
-      "get": {
-        "tags": [
-          "GPS"
-        ],
-        "parameters": [
-          {
-            "name": "provider",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interval",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "network",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "Mainnet"
-            }
-          },
-          {
-            "name": "includeSidechains",
-            "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataResponseModel"
-                    }
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataResponseModel"
-                    }
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataResponseModel"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/API/GPS/Instant": {
-      "get": {
-        "tags": [
-          "GPS"
-        ],
-        "parameters": [
-          {
-            "name": "includeSidechains",
-            "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataPoint"
-                    }
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataPoint"
-                    }
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataPoint"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/API/GPS/Max": {
-      "get": {
-        "tags": [
-          "GPS"
-        ],
-        "parameters": [
-          {
-            "name": "provider",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "network",
             "in": "query",
@@ -927,26 +395,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "$ref": "#/components/schemas/DataPoint"
-                  }
+                  "$ref": "#/components/schemas/AllDataModel"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "$ref": "#/components/schemas/DataPoint"
-                  }
+                  "$ref": "#/components/schemas/AllDataModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "$ref": "#/components/schemas/DataPoint"
-                  }
+                  "$ref": "#/components/schemas/AllDataModel"
                 }
               }
             }
@@ -1033,35 +492,24 @@
         }
       }
     },
-    "/API/TimeWarp/GetGasAdjustedTPSAt": {
+    "/API/TimeWarp/GetSyncProgress": {
       "get": {
         "tags": [
           "TimeWarp"
         ],
         "parameters": [
           {
-            "name": "timestamp",
+            "name": "provider",
             "in": "query",
             "schema": {
-              "type": "integer",
-              "format": "int64"
+              "type": "string"
             }
           },
           {
             "name": "network",
             "in": "query",
             "schema": {
-              "type": "string",
-              "default": "Mainnet"
-            }
-          },
-          {
-            "name": "count",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 30
+              "type": "string"
             }
           }
         ],
@@ -1071,91 +519,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DataPoint"
-                  }
+                  "$ref": "#/components/schemas/TimeWarpSyncProgressModel"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DataPoint"
-                  }
+                  "$ref": "#/components/schemas/TimeWarpSyncProgressModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DataPoint"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/API/TimeWarp/GetGPSAt": {
-      "get": {
-        "tags": [
-          "TimeWarp"
-        ],
-        "parameters": [
-          {
-            "name": "timestamp",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "name": "network",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "Mainnet"
-            }
-          },
-          {
-            "name": "count",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 30
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DataPoint"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DataPoint"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DataPoint"
-                  }
+                  "$ref": "#/components/schemas/TimeWarpSyncProgressModel"
                 }
               }
             }
@@ -1502,6 +876,37 @@
   },
   "components": {
     "schemas": {
+      "AllDataModel": {
+        "type": "object",
+        "properties": {
+          "providers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProviderModel"
+            },
+            "nullable": true
+          },
+          "maxData": {
+            "type": "object",
+            "additionalProperties": { },
+            "nullable": true
+          },
+          "allTPSData": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/DataResponseModel"
+                }
+              }
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "BlockInfoProviderStatus": {
         "enum": [
           0,
@@ -1556,6 +961,20 @@
         },
         "additionalProperties": false
       },
+      "ProviderModel": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ProviderResponseModel": {
         "type": "object",
         "properties": {
@@ -1567,16 +986,26 @@
             "type": "string",
             "nullable": true
           },
-          "theoreticalMaxTPS": {
-            "type": "integer",
-            "format": "int32"
-          },
           "type": {
             "type": "string",
             "nullable": true
           },
           "isGeneralPurpose": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TimeWarpSyncProgressModel": {
+        "type": "object",
+        "properties": {
+          "currentBlock": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "latestBlockHeight": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

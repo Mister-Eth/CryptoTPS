@@ -1,4 +1,4 @@
-# EthtpsApi.GasAdjustedTPSApi
+# CryptoTPSApi.GasAdjustedTPSApi
 
 All URIs are relative to *http://localhost*
 
@@ -20,9 +20,9 @@ Method | HTTP request | Description
 ### Example
 
 ```javascript
-import EthtpsApi from 'ethtps_api';
+import CryptoTPSApi from 'cryptotps_api';
 
-let apiInstance = new EthtpsApi.GasAdjustedTPSApi();
+let apiInstance = new CryptoTPSApi.GasAdjustedTPSApi();
 let opts = {
   'provider': "provider_example", // String | 
   'year': 56, // Number | 
@@ -71,9 +71,9 @@ No authorization required
 ### Example
 
 ```javascript
-import EthtpsApi from 'ethtps_api';
+import CryptoTPSApi from 'cryptotps_api';
 
-let apiInstance = new EthtpsApi.GasAdjustedTPSApi();
+let apiInstance = new CryptoTPSApi.GasAdjustedTPSApi();
 let opts = {
   'provider': "provider_example", // String | 
   'interval': "interval_example", // String | 
@@ -122,9 +122,9 @@ No authorization required
 ### Example
 
 ```javascript
-import EthtpsApi from 'ethtps_api';
+import CryptoTPSApi from 'cryptotps_api';
 
-let apiInstance = new EthtpsApi.GasAdjustedTPSApi();
+let apiInstance = new CryptoTPSApi.GasAdjustedTPSApi();
 let opts = {
   'includeSidechains': true // Boolean | 
 };
@@ -167,9 +167,9 @@ No authorization required
 ### Example
 
 ```javascript
-import EthtpsApi from 'ethtps_api';
+import CryptoTPSApi from 'cryptotps_api';
 
-let apiInstance = new EthtpsApi.GasAdjustedTPSApi();
+let apiInstance = new CryptoTPSApi.GasAdjustedTPSApi();
 let opts = {
   'provider': "provider_example", // String | 
   'network': "'Mainnet'" // String | 

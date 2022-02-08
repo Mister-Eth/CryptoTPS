@@ -53,7 +53,7 @@ export default class NetworkSummary extends React.Component {
                     </tbody>
                 </table>
                 {(this.state.hidel2BeatReference)?<></>:<center>
-                    Summary data provided by <a style={{color:'darkblue'}} href="https://l2beat.com?ref=https://ethtps.info">l2beat.com</a>
+                    Summary data provided by <a style={{color:'darkblue'}} href="https://l2beat.com?ref=https://cryptotps.info">l2beat.com</a>
                 </center>}
             </div>
         </>

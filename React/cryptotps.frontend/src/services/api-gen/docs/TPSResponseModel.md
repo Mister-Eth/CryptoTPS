@@ -1,4 +1,4 @@
-# EthtpsApi.TPSResponseModel
+# CryptoTPSApi.TPSResponseModel
 
 ## Properties
 

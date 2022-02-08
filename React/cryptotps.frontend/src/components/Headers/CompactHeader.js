@@ -17,18 +17,18 @@ export default class CompactHeader extends React.Component{
         return <>
         <Link to="/">
             <br/>
-        <div className={"jumpy unselectable"} style={{fontSize: this.elementSize, display:'inline'}}>ETHTPS.info</div>
+        <div className={"jumpy unselectable"} style={{fontSize: this.elementSize, display:'inline'}}>CRYPTOTPS.info</div>
         </Link>
         <div style={{display:'inline', float: 'right'}}>
-            <a href="https://github.com/Mister-Eth/ETHTPS">
+            <a href="https://github.com/Mister-Eth/CRYPTOTPS">
                 <img style={imageSize} className={"small-img"} src={githubIcon}>
                 </img>
                 </a>
-                <a href="https://twitter.com/ethtps">
+                <a href="https://twitter.com/cryptotps">
                 <img style={imageSize} className={"small-img"} src={twitterIcon}>
                 </img>
                 </a>
-                <a href="https://discord.gg/jWPcsTzpCT">
+                <a href="https://discord.gg/fg5Qc9DMJK">
                 <img style={imageSize} className={"small-img"} src={discordIcon}>
                 </img>
             </a>

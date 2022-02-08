@@ -1,4 +1,4 @@
-# EthtpsApi.DataPoint
+# CryptoTpsApi.DataPoint
 
 ## Properties
 

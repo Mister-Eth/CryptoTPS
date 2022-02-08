@@ -1,4 +1,4 @@
-# EthtpsApi.StatusApi
+# CryptoTpsApi.StatusApi
 
 All URIs are relative to *http://localhost*
 
@@ -17,9 +17,9 @@ Method | HTTP request | Description
 ### Example
 
 ```javascript
-import EthtpsApi from 'ethtps_api';
+import CryptoTpsApi from 'crypto_tps_api';
 
-let apiInstance = new EthtpsApi.StatusApi();
+let apiInstance = new CryptoTpsApi.StatusApi();
 let opts = {
   'provider': "provider_example" // String | 
 };

@@ -72,7 +72,7 @@ export default class TimeWarpPage extends React.Component{
         <CompactHeader/>
             <Helmet>
                 <title>
-                    ETHTPS.info - Time warp
+                    CRYPTOTPS.info - Time warp
                 </title>
             </Helmet>
             <div style={{display:'inline-block'}}>

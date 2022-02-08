@@ -119,7 +119,7 @@ export default class NetworkPage extends PageWithQueryString {
         <CompactHeader/>
         <Helmet>
             <title>
-                ETHTPS.info - {this.state.name}
+                CRYPTOTPS.info - {this.state.name}
             </title>
         </Helmet>
         <div style={{display:'inline-box'}}>
@@ -139,7 +139,7 @@ export default class NetworkPage extends PageWithQueryString {
             </div>
         </div>
         <hr/>
-        <a href={`https://github.com/WhoEvenAmI/ETHTPS/edit/dev/React/ethtps.frontend/src/components/pages/networks/details/${this.state.name}Details.js`} style={{float:'right', display:'inline'}}>
+        <a href={`https://github.com/WhoEvenAmI/CRYPTOTPS/edit/dev/React/cryptotps.frontend/src/components/pages/networks/details/${this.state.name}Details.js`} style={{float:'right', display:'inline'}}>
             [Edit]
         </a>
             <div>

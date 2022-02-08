@@ -18,7 +18,7 @@ export default class LargeHeader extends React.Component{
         <center>
             <div  style={{backgroundColor: '#7289da', borderRadius:3, marginBottom: '0px'}}>
             <img className={"small-img"} src={blackDiscordIcon}></img>
-            <a style={{color:'white', fontWeight: 'bold', fontSize: 15}} href={'https://discord.gg/jWPcsTzpCT'}>
+            <a style={{color:'white', fontWeight: 'bold', fontSize: 15}} href={'https://discord.gg/fg5Qc9DMJK'}>
             Click here to join our Discord channel
             </a>
             <img className={"small-img"} src={blackDiscordIcon}></img>
@@ -27,19 +27,19 @@ export default class LargeHeader extends React.Component{
 
 
         <Link to="/">
-        <div className={"jumpy unselectable"}>ETHTPS.info</div>
+        <div className={"jumpy unselectable"}>CRYPTOTPS.info</div>
         </Link>
         <br></br>
         <br></br>
-        <a href="https://github.com/Mister-Eth/ETHTPS">
+        <a href="https://github.com/Mister-Eth/CryptoTPS">
             <img className={"small-img"} src={githubIcon}>
             </img>
             </a>
-            <a href="https://twitter.com/ethtps">
+            <a href="https://twitter.com/cryptotps">
             <img className={"small-img"} src={twitterIcon}>
             </img>
             </a>
-            <a href="https://discord.gg/jWPcsTzpCT">
+            <a href="https://discord.gg/fg5Qc9DMJK">
             <img className={"small-img"} src={discordIcon}>
             </img>
             </a>

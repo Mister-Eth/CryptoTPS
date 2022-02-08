@@ -1,4 +1,4 @@
-# EthtpsApi.GPSDataPoint
+# CryptoTPSApi.GPSDataPoint
 
 ## Properties
 

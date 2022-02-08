@@ -1,4 +1,4 @@
-# EthtpsApi.BlockInfo
+# CryptoTPSApi.BlockInfo
 
 ## Properties
 

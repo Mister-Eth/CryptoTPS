@@ -1,4 +1,4 @@
-# EthtpsApi.TPSApi
+# CryptoTpsApi.TPSApi
 
 All URIs are relative to *http://localhost*
 
@@ -20,9 +20,9 @@ Method | HTTP request | Description
 ### Example
 
 ```javascript
-import EthtpsApi from 'ethtps_api';
+import CryptoTpsApi from 'crypto_tps_api';
 
-let apiInstance = new EthtpsApi.TPSApi();
+let apiInstance = new CryptoTpsApi.TPSApi();
 let opts = {
   'provider': "provider_example", // String | 
   'year': 56, // Number | 
@@ -71,9 +71,9 @@ No authorization required
 ### Example
 
 ```javascript
-import EthtpsApi from 'ethtps_api';
+import CryptoTpsApi from 'crypto_tps_api';
 
-let apiInstance = new EthtpsApi.TPSApi();
+let apiInstance = new CryptoTpsApi.TPSApi();
 let opts = {
   'provider': "provider_example", // String | 
   'interval': "interval_example", // String | 
@@ -122,9 +122,9 @@ No authorization required
 ### Example
 
 ```javascript
-import EthtpsApi from 'ethtps_api';
+import CryptoTpsApi from 'crypto_tps_api';
 
-let apiInstance = new EthtpsApi.TPSApi();
+let apiInstance = new CryptoTpsApi.TPSApi();
 let opts = {
   'includeSidechains': true // Boolean | 
 };
@@ -167,9 +167,9 @@ No authorization required
 ### Example
 
 ```javascript
-import EthtpsApi from 'ethtps_api';
+import CryptoTpsApi from 'crypto_tps_api';
 
-let apiInstance = new EthtpsApi.TPSApi();
+let apiInstance = new CryptoTpsApi.TPSApi();
 let opts = {
   'provider': "provider_example", // String | 
   'network': "'Mainnet'" // String | 

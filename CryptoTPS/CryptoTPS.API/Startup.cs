@@ -50,7 +50,7 @@ namespace CryptoTPS.API
                                   builder =>
                                   {
                                       builder.WithOrigins("https://CryptoTPS.info");
-                                      builder.WithOrigins("http://localhost:3007");
+                                      builder.WithOrigins("http://localhost:4007");
                                       builder.AllowAnyHeader();
                                   });
             });

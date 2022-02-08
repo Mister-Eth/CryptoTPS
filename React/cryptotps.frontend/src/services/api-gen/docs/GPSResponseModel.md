@@ -1,4 +1,4 @@
-# EthtpsApi.GPSResponseModel
+# CryptoTPSApi.GPSResponseModel
 
 ## Properties
 

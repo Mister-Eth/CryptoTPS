@@ -11,7 +11,7 @@ import * as qs from 'query-string';
 import HistoricalChart from '../../charts/HistoricalChart';
 import { Helmet } from 'react-helmet';
 import IntervalSlider from '../../IntervalSlider';
-import LargeHeader from '../../Headers/LargeHeader';
+import CompactHeader from '../../Headers/CompactHeader';
 
 class MainPage extends React.Component {
 
@@ -49,31 +49,6 @@ class MainPage extends React.Component {
   componentDidMount(){
 
     try{
-      /*
-      globalGeneralApi.aPIV2ProvidersGet((err, data, res) => {
-        if (data !== null){
-          let homePageModel = this.state.homePageModel;
-          homePageModel.providerData = data;
-          this.setState({homePageModel: homePageModel});
-        }
-      });
-  
-      globalGeneralApi.aPIV2ColorDictionaryGet((err, data, res) => {
-        if (data !== null){
-          let homePageModel = this.state.homePageModel;
-          homePageModel.colorDictionary = data;
-          this.setState({homePageModel: homePageModel});
-        }
-      });
-  
-      globalGeneralApi.aPIV2ProviderTypesColorDictionaryGet((err, data, res) => {
-        if (data !== null){
-          let homePageModel = this.state.homePageModel;
-          homePageModel.providerTypeColorDictionary = data;
-          this.setState({homePageModel: homePageModel});
-        }
-      });
-  */
       globalGeneralApi.aPIV2MaxGet({provider: 'All', network: this.state.network}, (err, data, res) => {
         if (data !== null){
           let homePageModel = this.state.homePageModel;
@@ -177,13 +152,12 @@ class MainPage extends React.Component {
   </div>;
   return (
     <>
-    <LargeHeader/>
+    <CompactHeader/>
        <Helmet>
           <title>
             Live Ethereum TPS data
         </title>
       </Helmet>
-      <ModeSelector defaultMode={this.state.mode} onChange={this.modeChanged.bind(this)}/>
       <div style={{display:'inline-block'}}>
         <h3 style={{display:'inline'}}>
           Current {formatModeName(this.state.mode)} overview
@@ -204,22 +178,6 @@ class MainPage extends React.Component {
             smoothing={this.state.smoothing}
             split="network"/>
             <IntervalSlider onChange={this.intervalSliderChanged.bind(this)}/>
-      <label className={"small"}>
-      <input
-            ref={ref=>this.excludeSidechainsCheckBox = ref}
-            name="excludeSidechains" type="checkbox"
-            checked={this.state.excludeSidechains}
-            onChange={this.handleExcludeSidechaisnInputChange.bind(this)}/>
-            Exclude sidechains
-      </label>
-      <label className={"small"}>
-      <input
-            ref={ref=>this.excludeNonGeneralPurposeNetworksCheckBox = ref}
-            name="excludeNonGeneralPurposeNetworks" type="checkbox"
-            checked={this.state.excludeNonGeneralPurposeNetworks}
-            onChange={this.handleExcludeNonGeneralPurposeNetworksInputChange.bind(this)}/>
-            Exclude non-general purpose networks
-      </label>
       <p>
         Drag the slider above to change the period of the chart and compare the historical {formatModeName(this.state.mode)} distribution.
       </p>

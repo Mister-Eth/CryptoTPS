@@ -71,7 +71,7 @@ Immutable X uses what is called a ZK Rollup, which takes thousands of off-chain 
 Throughout this process, the on-chain user assets are held in the smart contract and can only be released after a valid proof including the assets has been published in a batch.
 
                     </p>
-                    <a href="https://www.one37pm.com/nft/tech/immutable-x-ethereums-first-layer-2-for-nfts?ref=https://ethtps.info/Network?name=Immutable%20X">[Source]</a>
+                    <a href="https://www.one37pm.com/nft/tech/immutable-x-ethereums-first-layer-2-for-nfts?ref=https://cryptotps.info/Network?name=Immutable%20X">[Source]</a>
                 </div>
            </div>
         </>;

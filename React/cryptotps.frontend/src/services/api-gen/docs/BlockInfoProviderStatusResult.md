@@ -1,4 +1,4 @@
-# EthtpsApi.BlockInfoProviderStatusResult
+# CryptoTpsApi.BlockInfoProviderStatusResult
 
 ## Properties
 

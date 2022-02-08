@@ -1,4 +1,4 @@
-# EthtpsApi.TestApi
+# CryptoTPSApi.TestApi
 
 All URIs are relative to *http://localhost*
 
@@ -17,9 +17,9 @@ Method | HTTP request | Description
 ### Example
 
 ```javascript
-import EthtpsApi from 'ethtps_api';
+import CryptoTPSApi from 'cryptotps_api';
 
-let apiInstance = new EthtpsApi.TestApi();
+let apiInstance = new CryptoTPSApi.TestApi();
 let opts = {
   'blockNumber': 56 // Number | 
 };

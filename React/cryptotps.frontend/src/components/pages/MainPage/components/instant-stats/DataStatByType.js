@@ -105,15 +105,6 @@ export default class DataStatByType extends React.Component {
                 break;
         }
         return <>
-        <TotalDataSummaryStat
-             smoothing={this.state.smoothing}
-             providerData={this.state.providerData}
-             mode={this.state.mode}
-             data={this.state.data}/>
-        <p>
-            Click one of the buttons below to change the chart type
-        </p>
-        <StatTypeSelector onChange={this.onStatChanged.bind(this)} split={this.state.split}/>
         <p>
             {title}
         </p>

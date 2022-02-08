@@ -34,7 +34,7 @@ class App extends React.Component {
         Status
       </a>
       <div className={'inline'} style={{marginRight: '10px'}}/>
-      <a href="https://api.ethtps.info/API/v2/AllData">
+      <a href="https://api.cryptotps.info/API/v2/AllData">
         Download data
       </a>
     </div>
@@ -49,8 +49,8 @@ class App extends React.Component {
       </div>
       <br></br>
         Donate: 
-        <a style={{marginLeft:'5px'}} href="https://app.ens.domains/name/ethtps.eth/details">
-          ethtps.eth
+        <a style={{marginLeft:'5px'}} href="https://app.ens.domains/name/cryptotps.eth/details">
+          cryptotps.eth
         </a>
         <p className={'ul-hover inline'} style={{marginLeft:'5px'}}>
           (0x466Ef24d68ac9b61670eeE7fC2E001B951aBf482)

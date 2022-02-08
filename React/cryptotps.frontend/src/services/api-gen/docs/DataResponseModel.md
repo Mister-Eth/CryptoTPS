@@ -1,4 +1,4 @@
-# EthtpsApi.DataResponseModel
+# CryptoTpsApi.DataResponseModel
 
 ## Properties
 
