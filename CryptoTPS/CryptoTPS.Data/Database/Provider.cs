@@ -9,6 +9,7 @@ namespace CryptoTPS.Data.Database
     {
         public Provider()
         {
+            InverseSubchainOfNavigation = new HashSet<Provider>();
             OldestLoggedHistoricalEntries = new HashSet<OldestLoggedHistoricalEntry>();
             OldestLoggedTimeWarpBlocks = new HashSet<OldestLoggedTimeWarpBlock>();
             TimeWarpData = new HashSet<TimeWarpDatum>();
@@ -33,6 +34,7 @@ namespace CryptoTPS.Data.Database
         public int? IsGeneralPurpose { get; set; }
         public int? HistoricalAggregationDeltaBlock { get; set; }
         public bool Enabled { get; set; }
+        public int? SubchainOf { get; set; }
 
         public virtual ProviderType TypeNavigation { get; set; }
         public virtual ICollection<OldestLoggedHistoricalEntry> OldestLoggedHistoricalEntries { get; set; }
@@ -50,5 +52,7 @@ namespace CryptoTPS.Data.Database
         public virtual ICollection<TpsDataMonth> TpsDataMonths { get; set; }
         public virtual ICollection<TpsDataWeek> TpsDataWeeks { get; set; }
         public virtual ICollection<TpsDataYear> TpsDataYears { get; set; }
+        public virtual ICollection<Provider> InverseSubchainOfNavigation { get; set; }
+        public virtual Provider SubchainOfNavigation { get; set; }
     }
 }

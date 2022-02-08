@@ -316,7 +316,7 @@ namespace CryptoTPS.Data.Database
 
             modelBuilder.Entity<Provider>(entity =>
             {
-                entity.HasIndex(e => e.Name, "UQ__Provider__737584F6B7368E0F")
+                entity.HasIndex(e => e.Name, "UQ__Provider__737584F641C5EFF8")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("ID");
@@ -324,20 +324,16 @@ namespace CryptoTPS.Data.Database
                 entity.Property(e => e.Color)
                     .IsRequired()
                     .HasMaxLength(16)
-                    .IsUnicode(false)
-                    .HasDefaultValueSql("('#')");
-
-                entity.Property(e => e.IsGeneralPurpose).HasDefaultValueSql("((0))");
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasMaxLength(255);
 
-                entity.HasOne(d => d.TypeNavigation)
-                    .WithMany(p => p.Providers)
-                    .HasForeignKey(d => d.Type)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Providers__Type__3F466844");
+                entity.HasOne(d => d.SubchainOfNavigation)
+                    .WithMany(p => p.InverseSubchainOfNavigation)
+                    .HasForeignKey(d => d.SubchainOf)
+                    .HasConstraintName("FK__Providers__Subch__00200768");
             });
 
             modelBuilder.Entity<ProviderType>(entity =>
