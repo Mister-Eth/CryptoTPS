@@ -155,7 +155,7 @@ class MainPage extends React.Component {
     <CompactHeader/>
        <Helmet>
           <title>
-            Live Ethereum TPS data
+            Live TPS data
         </title>
       </Helmet>
       <div style={{display:'inline-block'}}>
