@@ -2,7 +2,7 @@ import { GeneralApi, TPSApi, StatusApi } from './api-gen/src/index';
 import ApiClient from './api-gen/src/ApiClient';
 import InstantDataService from './InstantDataService';
 
-export const client = new ApiClient('http://localhost:20202/');
+export const client = new ApiClient('http://api.cryptotps.info');
 export const globalGeneralApi = new GeneralApi(client);
 export const globalTPSApi = new TPSApi(client);
 export const globalStatusApi = new StatusApi(client);
