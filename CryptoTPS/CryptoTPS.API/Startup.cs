@@ -75,8 +75,9 @@ namespace CryptoTPS.API
                 AddHistoricalBlockInfoDataUpdaters(services);
                 AddTimeWarpUpdaters(services);
                 AddStatusNotifiers(services);
+                services.RegisterHangfireBackgroundService<ETHTPSProviderUpdateTask>(CronConstants.EveryMinute, TPSUPDATERQUEUE);
             }
-           
+
         }
 
         private void AddServices(IServiceCollection services)

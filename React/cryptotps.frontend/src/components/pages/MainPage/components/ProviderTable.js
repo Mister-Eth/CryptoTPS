@@ -125,9 +125,6 @@ class ProviderTable extends SortableTable {
             <TableCell align="left">
             
             </TableCell>
-            <TableCell align="left">
-            
-            </TableCell>
         </TableRow>
         {noDataProviders.map((row, i) => <TableRow>
           <TableCell align="left">
@@ -143,14 +140,6 @@ class ProviderTable extends SortableTable {
             </TableCell>
             <TableCell align="left">
             
-            </TableCell>
-            <TableCell align="left">
-            
-            </TableCell>
-            <TableCell align="left">
-              <div className={(!(row.type == "Mainnet" || row.type === "Optimistic rollup" || row.type === "ZK rollup")?'l1':'l1 green')}>
-                  {row.type}
-                </div>
             </TableCell>
         </TableRow>)}
         </>
@@ -185,11 +174,6 @@ class ProviderTable extends SortableTable {
               {this.getMaxRow(this.state.allMaxData[this.state.mode][row.name].value, row.name)}
             </div>
             </TableCell>
-            <TableCell align="left">
-              <div className={(!(row.type == "Mainnet" || row.type === "Optimistic rollup" || row.type === "ZK rollup")?'l1':'l1 green')}>
-                {row.type}
-              </div>
-            </TableCell>
           </TableRow>
         ))}
         {noDataRows}
@@ -211,7 +195,7 @@ class ProviderTable extends SortableTable {
                 </div>
             </TableSortLabel>
             </TableCell>
-            <TableCell width={150} align="left">
+            <TableCell align="left">
             <TableSortLabel
                 active={this.state.sort.columnName === 'name'}
                 direction={(this.state.sort.asc?'asc':'desc')}
@@ -243,16 +227,6 @@ class ProviderTable extends SortableTable {
                   </div>
                   </TableSortLabel>
               </TableCell>
-            <TableCell width={150} align="left">
-            <TableSortLabel
-                active={this.state.sort.columnName === 'type'}
-                direction={(this.state.sort.asc?'asc':'desc')}
-                onClick={()=>this.sortTableBy('type')}>
-                <div className={'lh b'}>
-                    Type
-                </div>
-                </TableSortLabel>
-            </TableCell>
           </TableRow>
         </TableHead>
         {tableBody}
