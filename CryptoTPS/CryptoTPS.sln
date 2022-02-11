@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTPS.Services", "Crypt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTPS.Data", "CryptoTPS.Data\CryptoTPS.Data.csproj", "{96B06C95-AAFC-4EBB-8694-12A4EC782FD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoTPS.API.Tests", "CryptoTPS.API.Tests\CryptoTPS.API.Tests.csproj", "{EE38C7CF-C033-4B04-9054-72F05229AF81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTPS.API.Tests", "CryptoTPS.API.Tests\CryptoTPS.API.Tests.csproj", "{EE38C7CF-C033-4B04-9054-72F05229AF81}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FC78079E-7AE5-4CAD-8CD9-B7792DB7433B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ETHTPS.Data", "..\..\..\..\Documents\GitHub\ETHTPS\ETHTPS.API\ETHTPS.Data\ETHTPS.Data.csproj", "{7DBBDF89-DCC3-4654-95FC-3329BCCBF420}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,10 @@ Global
 		{EE38C7CF-C033-4B04-9054-72F05229AF81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE38C7CF-C033-4B04-9054-72F05229AF81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE38C7CF-C033-4B04-9054-72F05229AF81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DBBDF89-DCC3-4654-95FC-3329BCCBF420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DBBDF89-DCC3-4654-95FC-3329BCCBF420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DBBDF89-DCC3-4654-95FC-3329BCCBF420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DBBDF89-DCC3-4654-95FC-3329BCCBF420}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

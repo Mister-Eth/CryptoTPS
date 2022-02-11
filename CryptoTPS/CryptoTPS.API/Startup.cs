@@ -26,6 +26,8 @@ using CryptoTPS.API.Infrastructure.Services.Implementations;
 using CryptoTPS.Services.BlockchainServices.Status;
 using CryptoTPS.Services.BlockchainServices.Status.BackgroundTasks.Discord;
 using CryptoTPS.Services.BlockchainServices.BlockTime;
+using CryptoTPS.Services.BlockchainServices.BlockInfoProviders;
+using ETHTPS.Data.Database;
 
 namespace CryptoTPS.API
 {
@@ -61,6 +63,7 @@ namespace CryptoTPS.API
                 c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
             });
             services.AddDbContext<CryptoTPSContext>(options => options.UseSqlServer(defaultConnectionString), ServiceLifetime.Transient);
+            services.AddDbContext<ETHTPSContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ETHTPS")));
             services.AddMemoryCache();
 
             AddServices(services);
@@ -75,7 +78,6 @@ namespace CryptoTPS.API
                 AddHistoricalBlockInfoDataUpdaters(services);
                 AddTimeWarpUpdaters(services);
                 AddStatusNotifiers(services);
-                services.RegisterHangfireBackgroundService<ETHTPSProviderUpdateTask>(CronConstants.EveryMinute, TPSUPDATERQUEUE);
             }
 
         }
